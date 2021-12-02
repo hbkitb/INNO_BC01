@@ -951,7 +951,7 @@ codeunit 50101 "FS Export"
         //"Sales & Receivables Setup": Record "Sales & Receivables Setup";
         //Customer: Record Customer;
         //country: Record "Country/Region";  //110121
-        //ExFile: Record LA_Exchange_File;
+        //ExFile: Record LA_Exchange_File;//
         Vægt: Decimal;
         Colli: Integer;
         //User: Record User;
