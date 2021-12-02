@@ -12,7 +12,7 @@ report 50104 "Inven_Order_List"
         {
             DataItemTableView = SORTING("Vendor No.");
             RequestFilterFields = "No.", "Location Filter", "Variant Filter", "Assembly BOM", "Inventory Posting Group", "Shelf No.";
-            column(CompanyName; COMPANYPROPERTY.DisplayName)
+            column(CompanyName; COMPANYPROPERTY.DisplayName)//
             {
             }
             column(ItemTableCaption; TableCaption + ': ' + ItemFilter)
