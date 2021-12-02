@@ -21,7 +21,7 @@ pageextension 50103 "Inno Employee Card ERPG" extends "Employee Card"
 
     actions
     {
-        // Add changes to page actions here//
+        // Add changes to page actions here
     }
 
     var
