@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="Please update this value">
+    <body>
+      <group id="body">
+        <trans-unit id="Report 2558224571 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pick Instruction</source>
+          <target>Pick Instruction</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - Control 4285444229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No of Copies</source>
+          <target>No of Copies</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - Control No of Copies - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - Control 4285444229 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how many copies of the document to print.</source>
+          <target>Specifies how many copies of the document to print.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - Control No of Copies - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 3140931181" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pick Instruction</source>
+          <target>Pick Instruction</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel OrderPickingListCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 501693335" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Page</source>
+          <target>Page</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel PageCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 3352664566" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item  No.</source>
+          <target>Item  No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel ItemNoCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 397892315" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order No.</source>
+          <target>Order No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel OrderNoCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 1049058725" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <target>Customer No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel CustomerNoCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 1498469207" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <target>Customer Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel CustomerNameCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 1559975813" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity to Assemble</source>
+          <target>Quantity to Assemble</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel QtyToAssembleCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 1211936208" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity Assembled</source>
+          <target>Quantity Assembled</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel QtyAssembledCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 1955847566" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipment Date</source>
+          <target>Shipment Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel ShipmentDateCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 3964645542" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity Picked</source>
+          <target>Quantity Picked</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel QtyPickedCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 1109914131" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target>Unit of Measure</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel UOMCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 4223383654" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity Consumed</source>
+          <target>Quantity Consumed</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel QtyConsumedCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 2558224571 - ReportLabel 3705442061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Copy</source>
+          <target>Copy</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Pick Instruction - ReportLabel CopyCaption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
