@@ -160,6 +160,18 @@ pageextension 50100 "Item_Card_Ex ERPG" extends "Item Card"
                     Report.Run(50105);
                 end;
             }
+            action("Lagstat")
+            {
+                Caption = 'Lagstat';
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+                    //Message('dette er ok');
+                    Page.Run(50106);
+                end;
+            }
+
 
         }
 

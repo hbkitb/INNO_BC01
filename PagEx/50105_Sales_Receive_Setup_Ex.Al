@@ -10,7 +10,7 @@ pageextension 50105 SalesReceive_Setup_INNO_ERPG extends "Sales & Receivables Se
                 {
 
                     ApplicationArea = All;
-                    Editable = FALSE;
+                    //Editable = FALSE;  //
 
                     ToolTip = 'Seneste dato for export fra DK. Må IKKE ændres';
                 }

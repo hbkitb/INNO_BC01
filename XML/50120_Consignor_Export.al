@@ -106,7 +106,7 @@ xmlport 50120 "Consignor export ERPG"
                     end;
                     //<<SE 
 
-                    //>> Customer Posting Group = 11//
+                    //>> Customer Posting Group = 11////
 
                     // >> DK
                     if comp."Country/Region Code" = 'DK' then begin

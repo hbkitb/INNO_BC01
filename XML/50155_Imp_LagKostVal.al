@@ -160,7 +160,7 @@ xmlport 50155 "50155_Imp_LagKostVal"
         CostPriceRec: Record "Purchase Price";
 
     /*
-    EVALUATE(Dag,COPYSTR(Felt02,1,2));
+    EVALUATE(Dag,COPYSTR(Felt02,1,2));//
     EVALUATE(Måned,COPYSTR(Felt02,4,2));
     EVALUATE(År,COPYSTR(Felt02,7,4));
     Dato := DMY2DATE(Dag,Måned,År);  //Dato oprettet

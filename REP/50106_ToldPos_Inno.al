@@ -755,7 +755,7 @@ report 50106 "ToldPos_Inno"
                     if Type = Type::Item then begin
                         //Message('item');//
                         if ItemTold.Get(Line."No.") then begin
-                            //Message('itemtold');
+                            //Message('itemtold');//
                             if ItemGroupTold.Get(ItemTold."Inventory Posting Group") then begin
                                 //Message('grouptold');
                                 Evaluate(Tx, ItemGroupTold.Code);

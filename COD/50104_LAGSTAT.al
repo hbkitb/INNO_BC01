@@ -29,7 +29,7 @@ codeunit 50104 "Lagstat ERPG"
                 item.SetRange(Type, item.Type::Inventory); //160221
                 i := item.Count;
                 LAG.DeleteAll(true);
-                if item.FindSet() then
+                if item.FindSet then
                     repeat
                         /*
                                                 CurrRec += 1;
