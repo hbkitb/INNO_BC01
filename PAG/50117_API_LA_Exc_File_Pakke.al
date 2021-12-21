@@ -5,7 +5,7 @@ page 50117 Api_LA_Exc_File_Pakke
     APIPublisher = 'ITB';
     APIGroup = 'ITBGroup';
     APIVersion = 'v1.0';
-    EntityName = 'LAExchangeFile';
+    EntityName = 'LAExcFilePakke';
     EntitySetName = 'innoLAExcFilePakke';
     SourceTable = LA_Exc_File_Pakke;
     DelayedInsert = true;
