@@ -963,6 +963,56 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exchange_File - Field Used - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 614526850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LA_Exc_File_Pakke</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 3641927271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 807464620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LAid</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field LAID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 1290794571 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field Txt01 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 3203884422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field Txt02 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 2566187805 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field Txt03 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 3672672016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field Txt04 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 3034975399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field Txt05 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 653097954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source></source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field Txt06 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 614526850 - Field 3220827225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Er posten brugt</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table LA_Exc_File_Pakke - Field Used - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 184028350 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Order Export ERPG</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2057,6 +2107,51 @@
           <source>Used</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exchange_File - Control Used - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>api_LA_Exc_File_Pakke</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>GUID</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Control 1290794571 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Txt01</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Control Txt01 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Control 3203884422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Txt02</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Control Txt02 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Control 2566187805 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Txt03</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Control Txt03 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Control 3672672016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Txt04</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Control Txt04 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Control 3034975399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Txt05</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Control Txt05 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Control 653097954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Txt06</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Control Txt06 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2462044499 - Control 3220827225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Used</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_LA_Exc_File_Pakke - Control Used - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3002571347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>api_prices</source>

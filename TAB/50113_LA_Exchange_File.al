@@ -217,16 +217,16 @@ table 50113 "LA_Exchange_File"
         Txt04 := Sales;
         Txt05 := Cust;
         Txt06 := Pakke;
-
-        SalesPakke.Reset;
-        SalesPakke.SetRange("No.", Sales);
-        SalesPakke.SetRange("Sell-to Customer No.", Cust);
-        IF SalesPakke.FindSet then begin
-            SalesPakke."Package Tracking No." := Pakke;
-            SalesPakke.PakkeNo := Pakke;
-            SalesPakke.Modify;
-        end;
-
+        /*
+                SalesPakke.Reset;
+                SalesPakke.SetRange("No.", Sales);
+                SalesPakke.SetRange("Sell-to Customer No.", Cust);
+                IF SalesPakke.FindSet then begin
+                    SalesPakke."Package Tracking No." := Pakke;
+                    SalesPakke.PakkeNo := Pakke;
+                    SalesPakke.Modify;
+                end;
+        */
 
 
 
