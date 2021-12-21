@@ -23,6 +23,14 @@ tableextension 50110 "Sales Line ERPG" extends "Sales Line"
             end;
         }
 
+        field(50102; PlacCopy; Text[30])
+        {
+            DataClassification = ToBeClassified;
+
+            Caption = 'Placering';
+        }
+
+
     }
 
     var

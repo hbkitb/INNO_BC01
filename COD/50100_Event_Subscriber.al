@@ -261,6 +261,9 @@ codeunit 50100 "Inno EventSubscriber ERPG"
             if SalesLine.Quantity <> 0 then begin
                 //if CustTable.get(SHeader."Bill-to Customer No.") then begin
                 if ItemTable.get(SalesLine."No.") then begin
+                    if SalesLine.PlacCopy = '' then
+                        SalesLine.PlacCopy := ItemTable.PlacCopy;  //201221
+
                     if (ItemTable.MinPris <> 0) then begin
                         if ((SalesLine.Amount / SalesLine.Quantity) < ItemTable.MinPris) then begin
                             Message('Pris er nu under den anbefalede minimumpris' + '\' +
@@ -295,6 +298,9 @@ codeunit 50100 "Inno EventSubscriber ERPG"
                 */
 
             end;
+            if ItemTable.get(SalesLine."No.") then
+                if SalesLine.PlacCopy = '' then
+                    SalesLine.PlacCopy := ItemTable.PlacCopy;  //201221
         end;
         //Message(Format(SalesLine.Quantity));
 

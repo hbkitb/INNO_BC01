@@ -4808,15 +4808,45 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Line Inno ERPG - Field DKExport - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2855494099 - Field 783770485 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Placering</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Line Inno ERPG - Field PlacCopy - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2855494099 - Field 2138245279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Placering</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Line Inno ERPG - Field ShelfNo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1250680130 - Field 3492875037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
           <source>DKExport</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Line ERPG - Field DKExport - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1250680130 - Field 783770485 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Placering</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Line ERPG - Field PlacCopy - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1250680130 - Field 2138245279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
           <source>Placering</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Line ERPG - Field ShelfNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 102922532 - Field 3492875037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>DKExport</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Shipment Line Inno ERPG - Field DKExport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 102922532 - Field 783770485 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Placering</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Shipment Line Inno ERPG - Field PlacCopy - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 102922532 - Field 2138245279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Placering</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Shipment Line Inno ERPG - Field ShelfNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3962566406 - Field 1856816140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Land imp/exp</source>
