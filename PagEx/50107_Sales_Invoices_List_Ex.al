@@ -10,7 +10,7 @@ pageextension 50107 "Posted Sales Invoices ERPG" extends "Posted Sales Invoices"
     {
         addlast(navigation)
         {
-            action(OrdreExportList)
+            action(OrdreExportList)//
             {
                 ApplicationArea = All;
                 Caption = 'Ordre Eksport liste';
