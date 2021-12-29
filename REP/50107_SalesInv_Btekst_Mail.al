@@ -1129,6 +1129,7 @@ report 50107 "SalesInv_Btekst_Mail"
                     if saleslink.FindSet then
                         Pakke := saleslink."Package Tracking No.";
                 end;
+                Pakke := "Package Tracking No.";  //221221 - HBK / ITB - Fra opd. faktura
 
 
 
