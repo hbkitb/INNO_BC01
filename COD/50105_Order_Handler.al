@@ -77,7 +77,8 @@ codeunit 50105 "Order Handler ERPG"
                         OrderTab.Antal := Lines.Quantity;
                         OrderTab."Pris (stk. pris)" := Lines."Unit Price";
                         OrderTab."Rabat (procent)" := Lines."Line Discount %";
-                        OrderTab."Beløb (samlet for linien)" := Lines."Unit Price" * Lines.Quantity;
+                        //OrderTab."Beløb (samlet for linien)" := Lines."Unit Price" * Lines.Quantity;
+                        OrderTab."Beløb (samlet for linien)" := ((Lines."Unit Price" / 100) * (100 - OrderTab."Rabat (procent)")) * Lines.Quantity;  //301221
                         OrderTab.Tekst := Lines.Description;
                         OrderTab.Enhed := Lines."Unit of Measure";
                         OrderTab.Momskode := SalesHeader."VAT Registration No.";
@@ -442,8 +443,11 @@ codeunit 50105 "Order Handler ERPG"
             line."Document No." := "Sales Header"."No.";
             line.Validate("No.", 'RestFakS');
             line.Description := 'Restfakturering';
+            line."Description 2" := Format(DKKOmregn);
             line.validate(Quantity, 1);
-            line.Validate("Unit Price", sh.Nos_FakDif - sh.Amount);
+            line."Unit Price" := sh.Nos_FakDif - sh.Amount; //301221
+            //301221 line.Validate("Unit Price", sh.Nos_FakDif - sh.Amount);
+            line.Validate("Unit Price");
             line."Line Amount" := line."Unit Price";
 
             line.Insert(true);
@@ -461,6 +465,7 @@ codeunit 50105 "Order Handler ERPG"
             line."Document No." := "Sales Header"."No.";
             line.Validate("No.", 'OmkostN');
             line.Description := 'Til dækninger af omkostninger';
+            line."Description 2" := Format(DKKOmregn);
             //160920 sh.CalcFields("Amount Including VAT");
             //160920 sh.CalcFields(Amount);
             line.validate(Quantity, -1);
@@ -480,7 +485,9 @@ codeunit 50105 "Order Handler ERPG"
             line.Validate("No.", 'RestFakN');
             line.Description := 'Restfakturering';
             line.validate(Quantity, 1);
-            line.Validate("Unit Price", sh.Nos_FakDif - sh.Amount);
+            //301221 line.Validate("Unit Price", sh.Nos_FakDif - sh.Amount);
+            line."Unit Price" := sh.Nos_FakDif - sh.Amount; //301221
+            line.Validate("Unit Price");  //301221
             line."Line Amount" := line."Unit Price";
 
 
@@ -521,6 +528,7 @@ codeunit 50105 "Order Handler ERPG"
             line."Document No." := "Sales Header"."No.";
             line.Validate("No.", 'ProvOmkostS');
             line.Description := 'Til dækning af Prov.omkostninger fra agent';
+            line."Description 2" := Format(DKKOmregn);
             line.validate(Quantity, 1);
             //PRIS = ANTAL X PROOMK
             line.Validate("Unit Price", Round((sh.Nos_FakDif * (SalseSetup.SVEProvPct / 100) / DKKOmregn), 0.01, '='));
@@ -543,6 +551,7 @@ codeunit 50105 "Order Handler ERPG"
             line."Document No." := "Sales Header"."No.";
             line.Validate("No.", 'ProvOmkostN');
             line.Description := 'Til dækning af Prov.omkostninger fra agent';
+            line."Description 2" := Format(DKKOmregn);
             line.validate(Quantity, 1);
 
             //PRIS = ANTAL X PROOMK

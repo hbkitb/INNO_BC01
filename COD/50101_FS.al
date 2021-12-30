@@ -832,6 +832,7 @@ codeunit 50101 "FS Export"
         BCSalesRep: Option "kunden","eOrdren";
         LagStat: Record "Lagstat ERPG";
         country: Record "Country/Region";  //110121
+        ItemTable: Record Item;  //301221
 
     begin
 
@@ -918,18 +919,23 @@ codeunit 50101 "FS Export"
                 "Sales Line".Validate("Unit Price", FSLines.SalesPrice);
                 "Sales Line".Validate(Quantity, FSLines.Qty);
                 "Sales Line".Validate("Line Discount %", FSLines.LineDisc);
+                "Sales Line".Validate("Unit Price", FSLines.SalesPrice); //301221
                 "Sales Line".Validate("Line No.", FSLines.linenumber * 1000);
 
-                LagStat.Reset();
-                LagStat.SetRange(Code, "Sales Line"."No.");
-                if LagStat.FindSet() then begin
-                    if "Sales Line".Quantity > LagStat.Inventory then
-                        Message('Ordrenr: ' + "Sales Line"."Document No." + ' Varenummer: ' + "Sales Line"."No." + '\' +
-                                'Antal: ' + Format("Sales Line".Quantity) + '\' +
-                                'Beholdning: ' + Format(LagStat.Inventory));
-                end
-                else
-                    Message('Der findes ingen lageroplysninger på dette varenummer');
+                if ItemTable.Get("Sales Line"."No.") then begin
+                    if ItemTable.Type = ItemTable.Type::Inventory then begin
+                        LagStat.Reset();
+                        LagStat.SetRange(Code, "Sales Line"."No.");
+                        if LagStat.FindSet() then begin
+                            if "Sales Line".Quantity > LagStat.Inventory then
+                                Message('Ordrenr: ' + "Sales Line"."Document No." + ' Varenummer: ' + "Sales Line"."No." + '\' +
+                                        'Antal: ' + Format("Sales Line".Quantity) + '\' +
+                                        'Beholdning: ' + Format(LagStat.Inventory));
+                        end
+                        else
+                            Message('Der findes ingen lageroplysninger på dette varenummer');
+                    end;
+                end;
 
                 "Sales Line".Insert(true);
 
