@@ -418,7 +418,7 @@ codeunit 50105 "Order Handler ERPG"
 
             DateT := DT2Date(CurrentDateTime());
             Currency.GetLastestExchangeRate('SEK', DateT, CurrencyExRate);
-            DKKOmregn := CurrencyExRate;
+            DKKOmregn := 1; //CurrencyExRate;
 
             //Faktura 1 Linje 1
             line."Document Type" := "Sales Header"."Document Type";
@@ -443,7 +443,7 @@ codeunit 50105 "Order Handler ERPG"
             line."Document No." := "Sales Header"."No.";
             line.Validate("No.", 'RestFakS');
             line.Description := 'Restfakturering';
-            line."Description 2" := Format(DKKOmregn);
+            //301221 line."Description 2" := Format(DKKOmregn);
             line.validate(Quantity, 1);
             sh.CalcFields(Amount);
             line."Unit Price" := sh.Nos_FakDif - sh.Amount; //301221
@@ -458,7 +458,7 @@ codeunit 50105 "Order Handler ERPG"
 
             DateT := DT2Date(CurrentDateTime());
             Currency.GetLastestExchangeRate('NOK', DateT, CurrencyExRate);
-            DKKOmregn := CurrencyExRate;
+            DKKOmregn := 1;  //301221 CurrencyExRate;
             //Faktura 1 Linje 1     
             line."Document Type" := "Sales Header"."Document Type";
             line.Type := line.Type::Item;
@@ -466,7 +466,7 @@ codeunit 50105 "Order Handler ERPG"
             line."Document No." := "Sales Header"."No.";
             line.Validate("No.", 'OmkostN');
             line.Description := 'Til dækninger af omkostninger';
-            line."Description 2" := Format(DKKOmregn);
+            //line."Description 2" := Format(DKKOmregn);
             //160920 sh.CalcFields("Amount Including VAT");
             //160920 sh.CalcFields(Amount);
             line.validate(Quantity, -1);
@@ -522,7 +522,7 @@ codeunit 50105 "Order Handler ERPG"
 
             DateT := DT2Date(CurrentDateTime());
             Currency.GetLastestExchangeRate('SEK', DateT, CurrencyExRate);
-            DKKOmregn := CurrencyExRate;
+            DKKOmregn := 1;  //301221 CurrencyExRate;
 
             line."Document Type" := "Sales Header"."Document Type";
             line.Type := line.Type::Item;
@@ -530,7 +530,7 @@ codeunit 50105 "Order Handler ERPG"
             line."Document No." := "Sales Header"."No.";
             line.Validate("No.", 'ProvOmkostS');
             line.Description := 'Til dækning af Prov.omkostninger fra agent';
-            line."Description 2" := Format(DKKOmregn);
+            //line."Description 2" := Format(DKKOmregn);
             line.validate(Quantity, 1);
             //PRIS = ANTAL X PROOMK
             line.Validate("Unit Price", Round((sh.Nos_FakDif * (SalseSetup.SVEProvPct / 100) / DKKOmregn), 0.01, '='));
@@ -544,7 +544,7 @@ codeunit 50105 "Order Handler ERPG"
 
             DateT := DT2Date(CurrentDateTime());
             Currency.GetLastestExchangeRate('NOK', DateT, CurrencyExRate);
-            DKKOmregn := CurrencyExRate;
+            DKKOmregn := 1;  //301221 CurrencyExRate;
 
             line."Document Type" := "Sales Header"."Document Type";
 
@@ -553,7 +553,7 @@ codeunit 50105 "Order Handler ERPG"
             line."Document No." := "Sales Header"."No.";
             line.Validate("No.", 'ProvOmkostN');
             line.Description := 'Til dækning af Prov.omkostninger fra agent';
-            line."Description 2" := Format(DKKOmregn);
+            //line."Description 2" := Format(DKKOmregn);
             line.validate(Quantity, 1);
 
             //PRIS = ANTAL X PROOMK
