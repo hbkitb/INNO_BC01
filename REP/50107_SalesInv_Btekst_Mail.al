@@ -1130,7 +1130,7 @@ report 50107 "SalesInv_Btekst_Mail"
                         Pakke := saleslink."Package Tracking No.";
                 end;
                 Pakke := "Package Tracking No.";  //221221 - HBK / ITB - Fra opd. faktura
-
+                                                  //
 
 
                 //hbk if not EnvInfoProxy.IsInvoicing then
@@ -1139,22 +1139,22 @@ report 50107 "SalesInv_Btekst_Mail"
                 case "Shipment Method Code" of
                     'GLS':
                         begin
-                            ITBLink_Url := 'http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DK01/DA/5004.htm?txtRefNo=' + Pakke;  //280421
-                            ITBLink_UrlText := 'GLS_' + Pakke;  //270421//
+                            ITBLink_Url := 'http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DK01/DA/5004.htm?txtRefNo=' + "Package Tracking No."; //Pakke;  //280421
+                            ITBLink_UrlText := 'GLS_' + "Package Tracking No."; //Pakke;  //270421//
                         end;
                     'POST':
                         begin
-                            ITBLink_Url := 'http://www.postdanmark.dk/tracktrace/TrackTrace.do?i_stregkode=' + Pakke;  //280421
-                            ITBLink_UrlText := 'POSTNORD_' + Pakke;  //270421//
+                            ITBLink_Url := 'http://www.postdanmark.dk/tracktrace/TrackTrace.do?i_stregkode=' + "Package Tracking No.";  //Pakke;  //280421
+                            ITBLink_UrlText := 'POSTNORD_' + "Package Tracking No.";  //Pakke;  //270421//
                         end;
                     'BRING':
                         begin
-                            ITBLink_Url := 'http://tracking.bring.dk/tracking.html?layout=standalone&q=' + Pakke;  //280421
-                            ITBLink_UrlText := 'BRING_' + Pakke;  //270421//
+                            ITBLink_Url := 'http://tracking.bring.dk/tracking.html?layout=standalone&q=' + "Package Tracking No.";  //Pakke;  //280421
+                            ITBLink_UrlText := 'BRING_' + "Package Tracking No."; //Pakke;  //270421//
                         end
                     else begin
-                            ITBLink_Url := 'http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DK01/DA/5004.htm?txtRefNo=' + Pakke;  //280421
-                            ITBLink_UrlText := 'GLS_' + Pakke;  //270421//
+                            ITBLink_Url := 'http://www.gls-group.eu/276-I-PORTAL-WEB/content/GLS/DK01/DA/5004.htm?txtRefNo=' + "Package Tracking No.";  //Pakke;  //280421
+                            ITBLink_UrlText := 'GLS_' + "Package Tracking No."; //Pakke;  //270421//
                         end;
 
                 end;
