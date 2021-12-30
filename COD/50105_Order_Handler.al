@@ -445,6 +445,7 @@ codeunit 50105 "Order Handler ERPG"
             line.Description := 'Restfakturering';
             line."Description 2" := Format(DKKOmregn);
             line.validate(Quantity, 1);
+            sh.CalcFields(Amount);
             line."Unit Price" := sh.Nos_FakDif - sh.Amount; //301221
             //301221 line.Validate("Unit Price", sh.Nos_FakDif - sh.Amount);
             line.Validate("Unit Price");
@@ -486,6 +487,7 @@ codeunit 50105 "Order Handler ERPG"
             line.Description := 'Restfakturering';
             line.validate(Quantity, 1);
             //301221 line.Validate("Unit Price", sh.Nos_FakDif - sh.Amount);
+            sh.CalcFields(Amount);
             line."Unit Price" := sh.Nos_FakDif - sh.Amount; //301221
             line.Validate("Unit Price");  //301221
             line."Line Amount" := line."Unit Price";
