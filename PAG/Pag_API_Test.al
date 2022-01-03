@@ -25,7 +25,7 @@ page 50110 ApiPageName
 
             repeater(Generel)
             {
-                field("MedNr"; Rec."No.")
+                field(SalesRep; Rec."No.")  //Var MedNr - 030121
                 {
                     ApplicationArea = All;
                     Caption = 'Medarb. Nummer';
@@ -50,10 +50,10 @@ page 50110 ApiPageName
                     Caption = 'Efternavn';
 
                 }
-                field("Email"; Rec."E-Mail")
+                field("EMail"; Rec."E-Mail")
                 {
                     ApplicationArea = All;
-                    Caption = 'Email';
+                    Caption = 'EMail';
 
                 }
                 field("MobilePhone"; Rec."Mobile Phone No.")

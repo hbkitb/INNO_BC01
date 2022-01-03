@@ -7,6 +7,98 @@ page 50111 Api_Prices
     APIVersion = 'v1.0';
     EntityName = 'Prices';
     EntitySetName = 'innoPrices';
+    SourceTable = "Sales Price";
+    DelayedInsert = true;
+    ODataKeyFields = SystemId;
+    Editable = false;
+    //
+
+    layout
+    {
+        area(Content)
+        {
+            field(Id; Rec.SystemId)
+            {
+                ApplicationArea = All;
+                Caption = 'GUID';
+
+            }
+
+            repeater(Generel)
+            {
+                field("PriceListCode"; Rec."Sales Code")
+                {
+                    ApplicationArea = All;
+                    Caption = 'PrislisteKode';
+
+                }
+
+
+                field(AmountType; rec."Sales Type")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Type: kunde/debitorprisgruppe/Alle';
+
+                }
+
+
+                field(AssetNo; Rec."Item No.")
+                {
+                    ApplicationArea = All;
+                    Caption = 'VareNr';
+
+                }
+
+                field(CurrencyCode; Rec."Currency Code")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Valutakode';
+
+                }
+
+                field(StartingDate; Rec."Starting Date")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Startdato';
+
+                }
+
+                field(EndingDate; Rec."Ending Date")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Slutdato';
+
+                }
+
+                field(MinimumQuantity; Rec."Minimum Quantity")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Min. antal';
+
+                }
+
+                field(UnitPrice; Rec."Unit Price")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Enhedspris';
+
+                }
+
+            }
+        }
+    }
+}
+
+/*
+page 50111 Api_Prices
+{
+    PageType = API;  //
+    Caption = 'api_prices';
+    APIPublisher = 'ITB';
+    APIGroup = 'ITBGroup';
+    APIVersion = 'v1.0';
+    EntityName = 'Prices';
+    EntitySetName = 'innoPrices';
     SourceTable = "Price List Line";
     DelayedInsert = true;
     ODataKeyFields = SystemId;
@@ -131,3 +223,4 @@ page 50111 Api_Prices
         }
     }
 }
+*/
