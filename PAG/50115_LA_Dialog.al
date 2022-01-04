@@ -49,6 +49,7 @@ page 50115 "LA_Dialog"
     var
         "Sales Line": Record "Sales Line";
         "Sales & Receivables Setup": Record "Sales & Receivables Setup";
+        srs: Record "Sales & Receivables Setup";
         Customer: Record Customer;
         country: Record "Country/Region";  //110121
         ExFile: Record LA_Exchange_File;
@@ -59,7 +60,7 @@ page 50115 "LA_Dialog"
     begin
 
         //Evt. indsæt beregning af kolli og vægt
-
+        srs.Get();  //040122
         Clear(Customer);
         Customer.SetRange("No.", "Sell-to Customer No.");
         Customer.FindSet;
@@ -84,8 +85,14 @@ page 50115 "LA_Dialog"
             country.Reset;
             if country.Get("Ship-to Country/Region Code") then
                 ExFile.Txt07 := country."EU Country/Region Code"
-            else
-                ExFile.Txt07 := 'DK';
+            else begin
+                if srs.Country = 'DK' then
+                    ExFile.Txt07 := 'DK';
+                if srs.Country = 'NO' then
+                    ExFile.Txt07 := 'NO';
+                if srs.Country = 'SE' then
+                    ExFile.Txt07 := 'SE';
+            end;
         end
         else begin
             ExFile.Txt02 := "Sell-to Customer Name";
@@ -95,21 +102,33 @@ page 50115 "LA_Dialog"
             ExFile.Txt06 := "Sell-to City";
             if country.Get("Sell-to Country/Region Code") then
                 ExFile.Txt07 := country."EU Country/Region Code"
-            else
-                ExFile.Txt07 := 'DK';
+            else begin
+                //ExFile.Txt07 := 'DK';
+                if srs.Country = 'DK' then
+                    ExFile.Txt07 := 'DK';
+                if srs.Country = 'NO' then
+                    ExFile.Txt07 := 'NO';
+                if srs.Country = 'SE' then
+                    ExFile.Txt07 := 'SE';
+            end;
         end;
         //Message('1000');
         ExFile.Txt08 := "Sell-to Customer No.";
         ExFile.Txt09 := "Sell-to Contact";
         ExFile.Txt10 := "Sell-to Phone No.";
         ExFile.Txt11 := "Your Reference";
-        if Customer."Gen. Bus. Posting Group" = '11' then begin
+        //if Customer."Gen. Bus. Posting Group" = '11' then begin
+        if srs.Country = 'SE' then begin
             ExFile.Txt12 := '32';
             ExFile.Txt13 := 'S';
-        end
-        else begin
+        end;
+        if srs.Country = 'DK' then begin
             ExFile.Txt12 := '34';
             ExFile.Txt13 := 'DK';
+        end;
+        if srs.Country = 'NO' then begin
+            ExFile.Txt12 := '36';
+            ExFile.Txt13 := 'N';
         end;
 
 

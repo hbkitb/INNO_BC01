@@ -73,7 +73,18 @@ page 50109 Api_Item
 
                 }
 
+                field("VendorItemNo"; Rec."Vendor Item No.")
+                {
+                    ApplicationArea = All;
+                    Caption = 'VendorItemNo';
 
+                }
+                field(Short; Rec.Short)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Short';
+
+                }
 
             }
         }

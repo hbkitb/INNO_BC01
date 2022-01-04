@@ -1248,10 +1248,10 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ApiPageName - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3446930880 - Control 1285973296 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Email</source>
+        <trans-unit id="Page 3446930880 - Control 1472620112 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EMail</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page ApiPageName - Control Email - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApiPageName - Control EMail - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3446930880 - Control 3973653471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fornavn</source>
@@ -1262,11 +1262,6 @@
           <source>Efternavn</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ApiPageName - Control LastName - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3446930880 - Control 3871452868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Medarb. Nummer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page ApiPageName - Control MedNr - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3446930880 - Control 1630453246 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>MellemNavn</source>
@@ -1282,6 +1277,11 @@
           <source>Telefon</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page ApiPageName - Control PhoneNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3446930880 - Control 3246749993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medarb. Nummer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ApiPageName - Control SalesRep - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3446930880 - Control 415504711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>GUID</source>
@@ -2159,19 +2159,14 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3002571347 - Control 2495610112 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type: alle,Pris,Kost,Rabat</source>
+          <source>Type: kunde/debitorprisgruppe/Alle</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control AmountType - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3002571347 - Control 3891747363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vare/Res-nr/grp</source>
+          <source>VareNr</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control AssetNo - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3002571347 - Control 1807323396 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>alle,Vare/res,grp</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control AssetType - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3002571347 - Control 567887726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Valutakode</source>
@@ -2183,21 +2178,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control EndingDate - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3002571347 - Control 501972646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>LinieBeløb</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control LineAmount - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3002571347 - Control 25284661 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>LinieRabat</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control LineDisc - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3002571347 - Control 1647620895 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>LinieNr</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control LineNumber - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3002571347 - Control 1592555183 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Min. antal</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2207,16 +2187,6 @@
           <source>PrislisteKode</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control PriceListCode - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3002571347 - Control 1900957152 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Deb/kre-nr/grp</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control SourceNo - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3002571347 - Control 3996861631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>DebKreType:alle,alle cu,cust,cu.pr.gr,cu.disc.gr,alle vend,vend,</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control SourceType - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3002571347 - Control 543275552 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Startdato</source>

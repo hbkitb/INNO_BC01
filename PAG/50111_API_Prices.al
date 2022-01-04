@@ -42,7 +42,7 @@ page 50111 Api_Prices
                 }
 
 
-                field(AssetNo; Rec."Item No.")
+                field(ItemNo; Rec."Item No.")
                 {
                     ApplicationArea = All;
                     Caption = 'VareNr';
