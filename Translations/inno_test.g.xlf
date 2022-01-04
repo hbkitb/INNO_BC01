@@ -1953,10 +1953,20 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Item - Control ProductVariantId - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3445198678 - Control 2405121198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Short</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Item - Control Short - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3445198678 - Control 3625705173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Standard enhedspris</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Item - Control UnitPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3445198678 - Control 1714454220 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VendorItemNo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Item - Control VendorItemNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3445198678 - Control 415504711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>GUID</source>
@@ -2163,11 +2173,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control AmountType - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3002571347 - Control 3891747363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>VareNr</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control AssetNo - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3002571347 - Control 567887726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Valutakode</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2177,6 +2182,11 @@
           <source>Slutdato</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control EndingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3002571347 - Control 332802016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VareNr</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Prices - Control ItemNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3002571347 - Control 1592555183 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Min. antal</source>
