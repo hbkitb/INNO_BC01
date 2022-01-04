@@ -127,6 +127,12 @@ page 50108 Api_Customer
                     Caption = 'Mobilnr';
 
                 }
+                field(LastDateModified; Rec."Last Date Modified")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Last Date Modified';
+
+                }
             }
         }
     }
