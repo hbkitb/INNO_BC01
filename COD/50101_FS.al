@@ -935,6 +935,8 @@ codeunit 50101 "FS Export"
                         else
                             Message('Der findes ingen lageroplysninger på dette varenummer');
                     end;
+                    if "Sales Line".PlacCopy = '' then
+                        "Sales Line".PlacCopy := ItemTable.PlacCopy;  //201221
                 end;
 
                 "Sales Line".Insert(true);
