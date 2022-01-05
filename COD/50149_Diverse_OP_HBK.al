@@ -5,7 +5,7 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
     begin
         MESSAGE('igang');
         //Mydialog.Open('Agiv kørsel', Svar01);
-        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost');
+        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto');
 
         case Svar01 of
             1:
@@ -43,7 +43,19 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                     Currency.GetLastestExchangeRate('EUR', DateT, CurrencyExRate);
                     Message(Format(CurrencyExRate));
                 end;
+            7:
+                begin
+                    Message('Barcode_EAN_GTIN');
+                    Xmlport.Run(Xmlport::"50157_Imp_Lag_Barcode");
+                end;
+            8:
+                begin
+                    Message('Deb. FakturaKonto');
+                    Xmlport.Run(Xmlport::"50158_Imp_Deb_InvAcc");
+                end;
+
         end;
+
         /* 230719 
         cust.Reset();
         cust.SetRange("Gen. Bus. Posting Group", '11');

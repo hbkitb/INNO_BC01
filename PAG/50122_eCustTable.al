@@ -447,6 +447,11 @@ page 50122 "eCustomer Card"
                             if Country1 = 'SVERIGE' then
                                 cust."Country/Region Code" := 'SE';
 
+                            //050122
+                            if SalesRep <> '' then
+                                cust."Salesperson Code" := SalesRep;
+                            //050122
+
                             //091121
                             country.Reset;
                             //Message('før');

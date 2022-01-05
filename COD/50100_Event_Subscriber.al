@@ -368,18 +368,22 @@ codeunit 50100 "Inno EventSubscriber ERPG"
 
                 end;
 
-                LagStat.Reset();
-                LagStat.SetRange(Code, SalLin."No.");
-                if LagStat.FindSet() then begin
-                    //171120 Message(Format(LagStat.Inventory));
-                    if SalLin."Qty. to Invoice" > LagStat.Inventory then
-                        Message('Ordrenr: ' + SalLin."Document No." + ' Varenummer: ' + SalLin."No." + '\' +
-                                'Antal: ' + Format(SalLin."Qty. to Invoice") + '\' +
-                                'Beholdning: ' + Format(LagStat.Inventory));
-                end
-                else
-                    Message('Ordrenr: ' + SalLin."Document No." + ' Varenummer: ' + SalLin."No." + '\' +
-                            'Der findes ingen lageroplysninger på dette varenummer');
+                if ItemTable.Get(SalLin."No.") then begin
+                    if ItemTable.Type = ItemTable.Type::Inventory then begin
+                        LagStat.Reset();
+                        LagStat.SetRange(Code, SalLin."No.");
+                        if LagStat.FindSet() then begin
+                            //171120 Message(Format(LagStat.Inventory));
+                            if SalLin."Qty. to Invoice" > LagStat.Inventory then
+                                Message('Ordrenr: ' + SalLin."Document No." + ' Varenummer: ' + SalLin."No." + '\' +
+                                        'Antal: ' + Format(SalLin."Qty. to Invoice") + '\' +
+                                        'Beholdning: ' + Format(LagStat.Inventory));
+                        end
+                        else
+                            Message('Ordrenr: ' + SalLin."Document No." + ' Varenummer: ' + SalLin."No." + '\' +
+                                    'Der findes ingen lageroplysninger på dette varenummer');
+                    end;  //item type          
+                end;  //item.get
 
             until SalLin.Next() = 0;
             if DangerWarning = true then

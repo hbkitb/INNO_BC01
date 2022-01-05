@@ -1523,6 +1523,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Customer - Control Fax - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1933727965 - Control 4168646537 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Date Modified</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Customer - Control LastDateModified - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1933727965 - Control 1131161452 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Mobilnr</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -4277,6 +4282,11 @@
           <source>LagImport</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort 50156_Imp_LagKart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2693702861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LagImport</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort 50157_Imp_Lag_Barcode - Property Caption</note>
         </trans-unit>
         <trans-unit id="XmlPort 3217405924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Consingnor Export</source>
