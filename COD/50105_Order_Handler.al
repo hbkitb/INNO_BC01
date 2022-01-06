@@ -173,14 +173,48 @@ codeunit 50105 "Order Handler ERPG"
     procedure CreateOrderFromExportTab(Country: Code[10]; cu: Record Customer)
     var
         se: Record "Sales & Receivables Setup";
-        lines: Record "Order Export ERPG";
+        lines: Record "Order Export ERPG" temporary; //temporary pr. 060122
         New: Boolean;
         Header: Record "Sales Header";
+        linesSort: Record "Order Export ERPG"; //060122
     begin
         NOS_FakDiff := 0;
         se.Get();
+        linesSort.SetRange(Land, Country);
+        linesSort.SetRange(IsCreated, false);
+
+        lines.Reset;
+        Clear(lines);
+        if linesSort.FindSet() then begin
+            repeat
+                lines.Reset;
+                lines.SetRange(Land, linessort.Land);
+                lines.SetRange(IsCreated, false);
+                lines.SetRange(OrdreNummer, 'Samle');
+                lines.SetRange(Varenummer, linesSort.Varenummer);
+                if lines.FindSet then begin
+                    lines.Antal := lines.Antal + linesSort.Antal;
+                    lines.Modify();
+                end
+                else begin
+                    Clear(lines);
+                    lines.Init();
+                    lines := linesSort;
+                    lines.OrdreNummer := 'Samle';
+                    lines.Insert;
+                end;
+
+
+                linesSort.IsCreated := true;
+                linesSort.Modify(true);
+            until linesSort.Next() = 0;
+        end;
+
+        Clear(lines);
         lines.SetRange(Land, Country);
         lines.SetRange(IsCreated, false);
+        lines.SetRange(OrdreNummer, 'Samle');
+
         New := true;
         LineNo := 1000;
         if lines.FindSet() then
@@ -212,6 +246,47 @@ codeunit 50105 "Order Handler ERPG"
         end;
     end;
 
+    /* gammel udgave af ovenfor - 060122
+       procedure CreateOrderFromExportTab(Country: Code[10]; cu: Record Customer)
+        var
+            se: Record "Sales & Receivables Setup";
+            lines: Record "Order Export ERPG";
+            New: Boolean;
+            Header: Record "Sales Header";
+        begin
+            NOS_FakDiff := 0;
+            se.Get();
+            lines.SetRange(Land, Country);
+            lines.SetRange(IsCreated, false);
+            New := true;
+            LineNo := 1000;
+            if lines.FindSet() then
+                repeat
+
+                    if not New then begin
+
+                        CreateLastLines(lines, cu, Header, se);
+                    end;
+                    if New then begin
+                        "Create Sales Order"(lines, cu, Header, se);
+                        New := false;
+                    end;
+
+                    LineNo := LineNo + 1000;
+                    lines.IsCreated := true;
+                    lines.Modify(true);
+
+
+
+
+                until lines.Next() = 0;
+            Header.Nos_FakDif := NOS_FakDiff;
+            if Header.Modify(true) then begin
+
+
+            end;
+        end;
+    */
     local procedure "Create Sales Order"(Line: Record "Order Export ERPG"; customer: Record Customer; VAR "Sales Header": Record "Sales Header"; se: Record "Sales & Receivables Setup")
     var
         item: Record item;
@@ -259,6 +334,9 @@ codeunit 50105 "Order Handler ERPG"
                 Currency.GetLastestExchangeRate(item.CostCurrency, DateT, CurrencyExRate); //231120
             //HBK 160920 er allerede i DKK !? 
             VarKostDKK := item.CostPriceVAL * CurrencyExRate;  //231120
+            if VarKostDKK = 0 then
+                VarKostDKK := item.CostPriceVAL;  //060122
+
             //VarKostDKK := item."Unit Cost" * 1; //(Skulle være kostvaluta)
             Currency.GetLastestExchangeRate('NOK', DateT, CurrencyExRate);
             "Sales Line"."Unit Price" := round((VarKostDKK + (VarKostDKK * se.PctImpNOK / 100)), 0.01, '=');
@@ -273,6 +351,8 @@ codeunit 50105 "Order Handler ERPG"
                 Currency.GetLastestExchangeRate(item.CostCurrency, DateT, CurrencyExRate);
             //HBK 160920 er allerede i DKK !? 
             VarKostDKK := item.CostPriceVAL * CurrencyExRate;  //231120
+            if VarKostDKK = 0 then
+                VarKostDKK := item.CostPriceVAL;  //060122            
             //VarKostDKK := item."Unit Cost" * 1; //(Skulle være kostvaluta fra lagerkart)
             Currency.GetLastestExchangeRate('SEK', DateT, CurrencyExRate);
             "Sales Line"."Unit Price" := Round((VarKostDKK + (VarKostDKK * se.PctImpSVE / 100)), 0.01, '=');
@@ -333,6 +413,8 @@ codeunit 50105 "Order Handler ERPG"
                 Currency.GetLastestExchangeRate(item.CostCurrency, DateT, CurrencyExRate); //231120
             //HBK 160920 er allerede i DKK !? 
             VarKostDKK := item.CostPriceVAL * CurrencyExRate;  //231120
+            if VarKostDKK = 0 then
+                VarKostDKK := item.CostPriceVAL;  //060122            
             //VarKostDKK := item."Unit Cost" * 1; //(Skulle være kostvaluta)
             Currency.GetLastestExchangeRate('NOK', DateT, CurrencyExRate);
             "Sales Line"."Unit Price" := round((VarKostDKK + (VarKostDKK * se.PctImpNOK / 100)), 0.01, '=');
@@ -359,6 +441,8 @@ codeunit 50105 "Order Handler ERPG"
                 Currency.GetLastestExchangeRate(item.CostCurrency, DateT, CurrencyExRate);
             //HBK 160920 er allerede i DKK !? 
             VarKostDKK := item.CostPriceVAL * CurrencyExRate;  //231120
+            if VarKostDKK = 0 then
+                VarKostDKK := item.CostPriceVAL;  //060122            
             //VarKostDKK := item."Unit Cost" * 1; //(Skulle være kostvaluta fra lagerkart)
             Currency.GetLastestExchangeRate('SEK', DateT, CurrencyExRate);
             "Sales Line"."Unit Price" := Round((VarKostDKK + (VarKostDKK * se.PctImpSVE / 100)), 0.01, '=');
