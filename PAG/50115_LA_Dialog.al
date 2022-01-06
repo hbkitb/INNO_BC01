@@ -116,7 +116,8 @@ page 50115 "LA_Dialog"
         ExFile.Txt08 := "Sell-to Customer No.";
         ExFile.Txt09 := "Sell-to Contact";
         ExFile.Txt10 := "Sell-to Phone No.";
-        ExFile.Txt11 := "Your Reference";
+        //ExFile.Txt11 := "Your Reference";
+        ExFile.Txt11 := "Sell-to Contact No."; //060121
         //if Customer."Gen. Bus. Posting Group" = '11' then begin
         if srs.Country = 'SE' then begin
             ExFile.Txt12 := '32';
