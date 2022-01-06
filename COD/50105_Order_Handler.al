@@ -211,6 +211,7 @@ codeunit 50105 "Order Handler ERPG"
         end;
 
         Clear(lines);
+        lines.SetCurrentKey(Land, Varenummer);
         lines.SetRange(Land, Country);
         lines.SetRange(IsCreated, false);
         lines.SetRange(OrdreNummer, 'Samle');
@@ -339,8 +340,8 @@ codeunit 50105 "Order Handler ERPG"
 
             //VarKostDKK := item."Unit Cost" * 1; //(Skulle være kostvaluta)
             Currency.GetLastestExchangeRate('NOK', DateT, CurrencyExRate);
-            "Sales Line"."Unit Price" := round((VarKostDKK + (VarKostDKK * se.PctImpNOK / 100)), 0.01, '=');
-            "Sales Line".Validate("Unit Price", Round(("Sales Line"."Unit Price" / CurrencyExRate), 0.01, '='));
+            "Sales Line"."Unit Price" := round((VarKostDKK + (VarKostDKK * se.PctImpNOK / 100)), 1.00, '=');   //var 0.01 060122
+            "Sales Line".Validate("Unit Price", Round(("Sales Line"."Unit Price" / CurrencyExRate), 1.00, '='));
 
         end;
         if Line.Land = 'SE' then begin
@@ -355,8 +356,8 @@ codeunit 50105 "Order Handler ERPG"
                 VarKostDKK := item.CostPriceVAL;  //060122            
             //VarKostDKK := item."Unit Cost" * 1; //(Skulle være kostvaluta fra lagerkart)
             Currency.GetLastestExchangeRate('SEK', DateT, CurrencyExRate);
-            "Sales Line"."Unit Price" := Round((VarKostDKK + (VarKostDKK * se.PctImpSVE / 100)), 0.01, '=');
-            "Sales Line".Validate("Unit Price", Round(("Sales Line"."Unit Price" / CurrencyExRate), 0.01, '='));
+            "Sales Line"."Unit Price" := Round((VarKostDKK + (VarKostDKK * se.PctImpSVE / 100)), 1.00, '=');   //var 0.01 060122
+            "Sales Line".Validate("Unit Price", Round(("Sales Line"."Unit Price" / CurrencyExRate), 1.00, '='));
 
 
         end;
@@ -417,8 +418,8 @@ codeunit 50105 "Order Handler ERPG"
                 VarKostDKK := item.CostPriceVAL;  //060122            
             //VarKostDKK := item."Unit Cost" * 1; //(Skulle være kostvaluta)
             Currency.GetLastestExchangeRate('NOK', DateT, CurrencyExRate);
-            "Sales Line"."Unit Price" := round((VarKostDKK + (VarKostDKK * se.PctImpNOK / 100)), 0.01, '=');
-            "Sales Line".Validate("Unit Price", Round(("Sales Line"."Unit Price" / CurrencyExRate), 0.01, '='));
+            "Sales Line"."Unit Price" := round((VarKostDKK + (VarKostDKK * se.PctImpNOK / 100)), 1.00, '=');   //var 0.01 060122
+            "Sales Line".Validate("Unit Price", Round(("Sales Line"."Unit Price" / CurrencyExRate), 1.00, '='));
 
             //261120
 
@@ -445,8 +446,8 @@ codeunit 50105 "Order Handler ERPG"
                 VarKostDKK := item.CostPriceVAL;  //060122            
             //VarKostDKK := item."Unit Cost" * 1; //(Skulle være kostvaluta fra lagerkart)
             Currency.GetLastestExchangeRate('SEK', DateT, CurrencyExRate);
-            "Sales Line"."Unit Price" := Round((VarKostDKK + (VarKostDKK * se.PctImpSVE / 100)), 0.01, '=');
-            "Sales Line".Validate("Unit Price", Round(("Sales Line"."Unit Price" / CurrencyExRate), 0.01, '='));
+            "Sales Line"."Unit Price" := Round((VarKostDKK + (VarKostDKK * se.PctImpSVE / 100)), 1.00, '=');   //var 0.01 060122
+            "Sales Line".Validate("Unit Price", Round(("Sales Line"."Unit Price" / CurrencyExRate), 1.00, '='));
             //261120
 
         end;
