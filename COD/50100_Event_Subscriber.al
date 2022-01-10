@@ -40,7 +40,7 @@ codeunit 50100 "Inno EventSubscriber ERPG"
     //lab: Record Customer;
 
     begin
-        rec.CompanyId := rec.SystemId;
+        //HBK / ITB - 1001222 iflg. Frede - rec.CompanyId := rec.SystemId;
 
     end;
 
@@ -69,7 +69,7 @@ codeunit 50100 "Inno EventSubscriber ERPG"
     //lab: Record Customer;
 
     begin
-        rec.ProductVariantId := rec.SystemId;
+        //HBK / ITB - 100122 iflg. Frede - rec.ProductVariantId := rec.SystemId;
 
     end;
     //050121
