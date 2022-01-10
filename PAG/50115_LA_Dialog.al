@@ -149,7 +149,12 @@ page 50115 "LA_Dialog"
         IF (UserId = 'BUKET') then
             ExFile.Txt16 := 'Buket'; //UserId
 
-        if (UserId <> 'ANNI') and (UserId <> 'BUKET') then
+        //HBK - ITB - 100122
+        IF (UserId = 'CLF') then
+            ExFile.Txt16 := 'Flemming'; //UserId
+                                        //100122    
+                                        //HBK / ITB - 100122
+        if (UserId <> 'ANNI') and (UserId <> 'BUKET') and (UserId <> 'CLF') then
             ExFile.Txt16 := 'Anni';
 
         if Customer."Gen. Bus. Posting Group" = '11' then
