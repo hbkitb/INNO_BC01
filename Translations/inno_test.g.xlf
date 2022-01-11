@@ -4578,6 +4578,21 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Control UnNumber - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2863416761 - Action 1999583028 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2557560783">
+          <source>Ordre Eksport liste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales CR ITB - Action OrdreExportList - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2863416761 - Action 878976129 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2557560783">
+          <source>Ekspoter Alle Kreditnotaer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales CR ITB - Action ExportAllInvoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2863416761 - Action 1590956071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2557560783">
+          <source>Ekspoter Kreditnota</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Posted Sales CR ITB - Action ExportInvoice - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2270505053 - Action 1999583028 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
           <source>Ordre Eksport liste</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -4858,6 +4873,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension PurchInvHeader Inno ERPG - Field FeeOil - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 4116817738 - Field 3492875037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>DKExport</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales CR Line Inno ITB - Field DKExport - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1404543978 - Field 1902150048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
           <source>Consignor ekporteret</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -5017,6 +5037,11 @@
           <source>Prov. Pct. SVE</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceiveSetup Inno ERPG - Field SVEProvPct - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2430198569 - Field 3189034173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Kreditnota eksporteret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Salse CR header Inno ITB - Field DKEXPORT - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1636907579 - Field 1902150048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Consignor ekporteret</source>

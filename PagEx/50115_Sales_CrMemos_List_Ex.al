@@ -1,4 +1,4 @@
-pageextension 50115 "Posted Sales CR ITB" extends "Posted Sales Credit Memo"
+pageextension 50115 "Posted Sales CR ITB" extends "Posted Sales Credit Memos"
 {
     layout
     {
