@@ -184,7 +184,7 @@ table 50108 "Order Export ERPG"
 
     keys
     {
-        key(PK; OrdreNummer, Debitorkonto, LinieNummer, Land, Varenummer) //varenummer 100122
+        key(PK; OrdreNummer, Debitorkonto, LinieNummer, Land) //varenummer 100122
         {
             Clustered = true;
         }
