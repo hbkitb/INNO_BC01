@@ -133,6 +133,12 @@ page 50108 Api_Customer
                     Caption = 'Last Date Modified';
 
                 }
+                field(Country; "Country/Region Code")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Country';
+
+                }
             }
         }
     }

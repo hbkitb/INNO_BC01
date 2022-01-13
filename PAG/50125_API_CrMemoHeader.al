@@ -218,6 +218,12 @@ page 50125 Api_CrMemoHeader
                     Caption = 'Total ex. moms';
 
                 }
+                field(PostingDate; "Posting Date")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Dato';
+
+                }
 
             }
         }

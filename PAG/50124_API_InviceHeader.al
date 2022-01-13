@@ -218,6 +218,12 @@ page 50124 Api_InvoiceHeader
                     Caption = 'Total ex. moms';
 
                 }
+                field(PostingDate; "Posting Date")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Dato';
+
+                }
 
             }
         }
