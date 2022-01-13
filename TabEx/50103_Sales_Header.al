@@ -56,6 +56,25 @@ tableextension 50103 "Salse header Inno ERPG" extends "Sales Header"
         }
     }
 
+    //HBK / ITB - 130122
+    trigger OnAfterInsert()
+
+    var
+        SellCust: Record Customer;
+    begin
+        SellCust.Reset;
+        SellCust.SetRange("No.", "Sell-to Customer No.");
+        if SellCust.FindSet then begin
+            if SellCust."Salesperson Code" <> '' then begin
+                Rec."Salesperson Code" := SellCust."Salesperson Code";
+                Rec.Modify;
+            end;
+        end;
+
+    end;
+    //HBK / ITB - 130122
+
+
     var
 
 }

@@ -857,7 +857,8 @@ codeunit 50101 "FS Export"
         "Sales Header"."Document Type" := "Sales Header"."Document Type"::Order;
 
         "Sales Header".Validate("Sell-to Customer No.", head.Custaccount);
-        "Sales Header".Validate("Bill-to Customer No.", head.Custaccount);
+        //"Sales Header".Validate("Bill-to Customer No.", head.Custaccount); //130122 se nedenstående linie
+        "Sales Header".Validate("Bill-to Customer No.");  //130122
         "Sales Header".eSalesNumber := head.eSalesNumber;
         if Customer."Salesperson Code" <> head.SalesRep then begin
             SalesDiff.Open('Kundens sælger er forskellig fra eOrdrens sælger' + '\' +

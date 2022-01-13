@@ -1383,6 +1383,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_CrMemoHeader - Control Phone - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3984889333 - Control 3037438984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dato</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_CrMemoHeader - Control PostingDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3984889333 - Control 3656619620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ReferenceNummer</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1512,6 +1517,11 @@
           <source>CompanyId</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_Customer - Control CompanyId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1933727965 - Control 1856816140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Country</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_Customer - Control Country - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1933727965 - Control 1472620112 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>email</source>
@@ -1832,6 +1842,11 @@
           <source>Telefon</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_InvoiceHeader - Control Phone - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1849164531 - Control 3037438984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dato</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_InvoiceHeader - Control PostingDate - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1849164531 - Control 3656619620 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ReferenceNummer</source>
