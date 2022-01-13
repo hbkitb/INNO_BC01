@@ -10,7 +10,7 @@ pageextension 50115 "Posted Sales CR ITB" extends "Posted Sales Credit Memos"
     {
         addlast(navigation)
         {
-            action(OrdreExportList)//
+            action(OrdreExportList)////
             {
                 ApplicationArea = All;
                 Caption = 'Ordre Eksport liste';
