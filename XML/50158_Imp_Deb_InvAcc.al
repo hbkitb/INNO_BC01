@@ -161,7 +161,11 @@ xmlport 50158 "50158_Imp_Deb_InvAcc"
         IF DebKart.FINDSET then
             repeat
                 if Felt02 <> '' then
-                    DebKart."Bill-to Customer No." := Felt02;
+                    if copystr(DebKart."Post Code", 1, 2) = 'SE' then
+                        DebKart."Post Code" := felt02;
+
+
+                //DebKart."Bill-to Customer No." := Felt02;
 
                 /*
                  DebKart.PDFfaktura := false
