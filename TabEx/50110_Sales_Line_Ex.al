@@ -33,6 +33,48 @@ tableextension 50110 "Sales Line ERPG" extends "Sales Line"
 
     }
 
+    //HBK / ITB - 170122
+    trigger OnAfterInsert()
+
+    var
+        itemTable: Record Item;
+
+    begin
+        if (ItemTable.get(Rec."No.")) and (rec.Quantity <> 0) then begin
+
+            if (ItemTable.MinPris <> 0) then begin
+                if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) then begin
+                    Message('Pris er nu under den anbefalede minimumpris' + '\' +
+                            'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
+                            'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                end;
+            end;
+        end;
+
+
+    end;
+
+    trigger OnAfterModify()
+
+    var
+        itemTable: Record Item;
+
+    begin
+        if (ItemTable.get(Rec."No.")) and (rec.Quantity <> 0) then begin
+
+            if (ItemTable.MinPris <> 0) then begin
+                if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) then begin
+                    Message('Pris er nu under den anbefalede minimumpris' + '\' +
+                            'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
+                            'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                end;
+            end;
+        end;
+
+
+    end;
+    //HBK / ITB - 170122
+
     var
 
 }

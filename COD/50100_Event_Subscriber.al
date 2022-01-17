@@ -263,14 +263,15 @@ codeunit 50100 "Inno EventSubscriber ERPG"
                 if ItemTable.get(SalesLine."No.") then begin
                     if SalesLine.PlacCopy = '' then
                         SalesLine.PlacCopy := ItemTable.PlacCopy;  //201221
-
-                    if (ItemTable.MinPris <> 0) then begin
-                        if ((SalesLine.Amount / SalesLine.Quantity) < ItemTable.MinPris) then begin
-                            Message('Pris er nu under den anbefalede minimumpris' + '\' +
-                                    'under med: ' + Format(ItemTable.MinPris - (SalesLine.Amount / SalesLine.Quantity)) + '\' +
-                                    'I alt: ' + Format((ItemTable.MinPris - (SalesLine.Amount / SalesLine.Quantity)) * SalesLine.Quantity));
-                        end;
-                    end;
+                                                                   /* 170122
+                                                                                       if (ItemTable.MinPris <> 0) then begin
+                                                                                           if ((SalesLine.Amount / SalesLine.Quantity) < ItemTable.MinPris) then begin
+                                                                                               Message('Pris er nu under den anbefalede minimumpris' + '\' +
+                                                                                                       'under med: ' + Format(ItemTable.MinPris - (SalesLine.Amount / SalesLine.Quantity)) + '\' +
+                                                                                                       'I alt: ' + Format((ItemTable.MinPris - (SalesLine.Amount / SalesLine.Quantity)) * SalesLine.Quantity));
+                                                                                           end;
+                                                                                       end;
+                                                                   */
 
                     //160221
                     if ItemTable.Type = ItemTable.Type::Inventory then begin
