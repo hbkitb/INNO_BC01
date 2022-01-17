@@ -409,5 +409,20 @@ codeunit 50100 "Inno EventSubscriber ERPG"
         //130121 Message('123456');
     end;
 
+    //170122
+    [EventSubscriber(ObjectType::Table, 17, 'OnAfterCopyGLEntryFromGenJnlLine', '', true, true)]
+    local procedure DescriptionGLEntry(VAR GLEntry: Record "G/L Entry"; var GenJournalLine: record "Gen. Journal Line")
+    var
+    //lab: Record Customer;
+
+    begin
+        if GLEntry."Document Type" = GLEntry."Document Type"::Invoice then
+            GLEntry.Description := 'Fa: ' + GLEntry."Document No." + ' D: ' + GLEntry."Source No.";
+        if GLEntry."Document Type" = GLEntry."Document Type"::"Credit Memo" then
+            GLEntry.Description := 'Kn: ' + GLEntry."Document No." + ' D: ' + GLEntry."Source No.";
+
+    end;
+
 
 }
+

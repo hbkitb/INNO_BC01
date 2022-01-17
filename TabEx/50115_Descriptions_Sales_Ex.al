@@ -1,6 +1,7 @@
+/*
 tableextension 50115 "GL_Entry_Desc" extends "G/L Entry"
 {
-    fields
+        fields
     {
 
 
@@ -30,9 +31,10 @@ tableextension 50115 "GL_Entry_Desc" extends "G/L Entry"
     var
 
 }
+*/
 
 
-tableextension 50116 "CustLed_Desc" extends "Cust. Ledger Entry"
+tableextension 50115 "CustLed_Desc" extends "Cust. Ledger Entry"
 {
     fields
     {
