@@ -11,136 +11,6 @@
       <rd:DataSourceID>988fe03d-3397-4c06-89bf-bc11e4d27678</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="CompanyName">
-          <DataField>CompanyName</DataField>
-        </Field>
-        <Field Name="ItemFilter">
-          <DataField>ItemFilter</DataField>
-        </Field>
-        <Field Name="No_Item">
-          <DataField>No_Item</DataField>
-        </Field>
-        <Field Name="Description_Item">
-          <DataField>Description_Item</DataField>
-        </Field>
-        <Field Name="AssemblyBOM_Item">
-          <DataField>AssemblyBOM_Item</DataField>
-        </Field>
-        <Field Name="BaseUnitofMeasure_Item">
-          <DataField>BaseUnitofMeasure_Item</DataField>
-        </Field>
-        <Field Name="InventoryPostingGrp_Item">
-          <DataField>InventoryPostingGrp_Item</DataField>
-        </Field>
-        <Field Name="ShelfNo_Item">
-          <DataField>ShelfNo_Item</DataField>
-        </Field>
-        <Field Name="VendorItemNo_Item">
-          <DataField>VendorItemNo_Item</DataField>
-        </Field>
-        <Field Name="LeadTimeCalculation_Item">
-          <DataField>LeadTimeCalculation_Item</DataField>
-        </Field>
-        <Field Name="ReorderPoint_Item">
-          <DataField>ReorderPoint_Item</DataField>
-        </Field>
-        <Field Name="ReorderPoint_ItemFormat">
-          <DataField>ReorderPoint_ItemFormat</DataField>
-        </Field>
-        <Field Name="AlternativeItemNo_Item">
-          <DataField>AlternativeItemNo_Item</DataField>
-        </Field>
-        <Field Name="Blocked_Item">
-          <DataField>Blocked_Item</DataField>
-        </Field>
-        <Field Name="InventoryListCaption">
-          <DataField>InventoryListCaption</DataField>
-        </Field>
-        <Field Name="CurrReportPageNoCaption">
-          <DataField>CurrReportPageNoCaption</DataField>
-        </Field>
-        <Field Name="ItemAssemblyBOMCaption">
-          <DataField>ItemAssemblyBOMCaption</DataField>
-        </Field>
-        <Field Name="ItemBlockedCaption">
-          <DataField>ItemBlockedCaption</DataField>
-        </Field>
-        <Field Name="ThisYear">
-          <DataField>ThisYear</DataField>
-        </Field>
-        <Field Name="ThisYearFormat">
-          <DataField>ThisYearFormat</DataField>
-        </Field>
-        <Field Name="LastYear">
-          <DataField>LastYear</DataField>
-        </Field>
-        <Field Name="LastYearFormat">
-          <DataField>LastYearFormat</DataField>
-        </Field>
-        <Field Name="Safety_Stock_Quantity">
-          <DataField>Safety_Stock_Quantity</DataField>
-        </Field>
-        <Field Name="Safety_Stock_QuantityFormat">
-          <DataField>Safety_Stock_QuantityFormat</DataField>
-        </Field>
-        <Field Name="Advarsel">
-          <DataField>Advarsel</DataField>
-        </Field>
-        <Field Name="StrPrKs">
-          <DataField>StrPrKs</DataField>
-        </Field>
-        <Field Name="StkPrLag">
-          <DataField>StkPrLag</DataField>
-        </Field>
-        <Field Name="StkPrPal">
-          <DataField>StkPrPal</DataField>
-        </Field>
-        <Field Name="Inventory">
-          <DataField>Inventory</DataField>
-        </Field>
-        <Field Name="InventoryFormat">
-          <DataField>InventoryFormat</DataField>
-        </Field>
-        <Field Name="SalesThisMonth">
-          <DataField>SalesThisMonth</DataField>
-        </Field>
-        <Field Name="SalesThisMonthFormat">
-          <DataField>SalesThisMonthFormat</DataField>
-        </Field>
-        <Field Name="gns">
-          <DataField>gns</DataField>
-        </Field>
-        <Field Name="gnsFormat">
-          <DataField>gnsFormat</DataField>
-        </Field>
-        <Field Name="FromDate">
-          <DataField>FromDate</DataField>
-        </Field>
-        <Field Name="ToDate">
-          <DataField>ToDate</DataField>
-        </Field>
-        <Field Name="KredStreg">
-          <DataField>KredStreg</DataField>
-        </Field>
-        <Field Name="Factor">
-          <DataField>Factor</DataField>
-        </Field>
-        <Field Name="FactorFormat">
-          <DataField>FactorFormat</DataField>
-        </Field>
-        <Field Name="Postmed">
-          <DataField>Postmed</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -149,10 +19,10 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.95326cm</Width>
+                  <Width>1.50669cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.3938cm</Width>
+                  <Width>1.6478cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.67733cm</Width>
@@ -167,7 +37,7 @@
                   <Width>1.66353cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.53351cm</Width>
+                  <Width>1.98008cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>4.39148cm</Width>
@@ -1579,6 +1449,7 @@
                             <PaddingRight>5pt</PaddingRight>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1708,7 +1579,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Top>10pt</Top>
             <Height>1.40432cm</Height>
-            <Width>23.26169cm</Width>
+            <Width>23.51569cm</Width>
             <Style />
           </Tablix>
           <Textbox Name="ItemTABLECAPTIONItemFilter">
@@ -2291,4 +2162,134 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>097fcdeb-957a-496d-8a84-1071c4b6511c</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="ItemFilter">
+          <DataField>ItemFilter</DataField>
+        </Field>
+        <Field Name="No_Item">
+          <DataField>No_Item</DataField>
+        </Field>
+        <Field Name="Description_Item">
+          <DataField>Description_Item</DataField>
+        </Field>
+        <Field Name="AssemblyBOM_Item">
+          <DataField>AssemblyBOM_Item</DataField>
+        </Field>
+        <Field Name="BaseUnitofMeasure_Item">
+          <DataField>BaseUnitofMeasure_Item</DataField>
+        </Field>
+        <Field Name="InventoryPostingGrp_Item">
+          <DataField>InventoryPostingGrp_Item</DataField>
+        </Field>
+        <Field Name="ShelfNo_Item">
+          <DataField>ShelfNo_Item</DataField>
+        </Field>
+        <Field Name="VendorItemNo_Item">
+          <DataField>VendorItemNo_Item</DataField>
+        </Field>
+        <Field Name="LeadTimeCalculation_Item">
+          <DataField>LeadTimeCalculation_Item</DataField>
+        </Field>
+        <Field Name="ReorderPoint_Item">
+          <DataField>ReorderPoint_Item</DataField>
+        </Field>
+        <Field Name="ReorderPoint_ItemFormat">
+          <DataField>ReorderPoint_ItemFormat</DataField>
+        </Field>
+        <Field Name="AlternativeItemNo_Item">
+          <DataField>AlternativeItemNo_Item</DataField>
+        </Field>
+        <Field Name="Blocked_Item">
+          <DataField>Blocked_Item</DataField>
+        </Field>
+        <Field Name="InventoryListCaption">
+          <DataField>InventoryListCaption</DataField>
+        </Field>
+        <Field Name="CurrReportPageNoCaption">
+          <DataField>CurrReportPageNoCaption</DataField>
+        </Field>
+        <Field Name="ItemAssemblyBOMCaption">
+          <DataField>ItemAssemblyBOMCaption</DataField>
+        </Field>
+        <Field Name="ItemBlockedCaption">
+          <DataField>ItemBlockedCaption</DataField>
+        </Field>
+        <Field Name="ThisYear">
+          <DataField>ThisYear</DataField>
+        </Field>
+        <Field Name="ThisYearFormat">
+          <DataField>ThisYearFormat</DataField>
+        </Field>
+        <Field Name="LastYear">
+          <DataField>LastYear</DataField>
+        </Field>
+        <Field Name="LastYearFormat">
+          <DataField>LastYearFormat</DataField>
+        </Field>
+        <Field Name="Safety_Stock_Quantity">
+          <DataField>Safety_Stock_Quantity</DataField>
+        </Field>
+        <Field Name="Safety_Stock_QuantityFormat">
+          <DataField>Safety_Stock_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Advarsel">
+          <DataField>Advarsel</DataField>
+        </Field>
+        <Field Name="StrPrKs">
+          <DataField>StrPrKs</DataField>
+        </Field>
+        <Field Name="StkPrLag">
+          <DataField>StkPrLag</DataField>
+        </Field>
+        <Field Name="StkPrPal">
+          <DataField>StkPrPal</DataField>
+        </Field>
+        <Field Name="Inventory">
+          <DataField>Inventory</DataField>
+        </Field>
+        <Field Name="InventoryFormat">
+          <DataField>InventoryFormat</DataField>
+        </Field>
+        <Field Name="SalesThisMonth">
+          <DataField>SalesThisMonth</DataField>
+        </Field>
+        <Field Name="SalesThisMonthFormat">
+          <DataField>SalesThisMonthFormat</DataField>
+        </Field>
+        <Field Name="gns">
+          <DataField>gns</DataField>
+        </Field>
+        <Field Name="gnsFormat">
+          <DataField>gnsFormat</DataField>
+        </Field>
+        <Field Name="FromDate">
+          <DataField>FromDate</DataField>
+        </Field>
+        <Field Name="ToDate">
+          <DataField>ToDate</DataField>
+        </Field>
+        <Field Name="KredStreg">
+          <DataField>KredStreg</DataField>
+        </Field>
+        <Field Name="Factor">
+          <DataField>Factor</DataField>
+        </Field>
+        <Field Name="FactorFormat">
+          <DataField>FactorFormat</DataField>
+        </Field>
+        <Field Name="Postmed">
+          <DataField>Postmed</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

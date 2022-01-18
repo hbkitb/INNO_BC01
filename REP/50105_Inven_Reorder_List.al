@@ -163,7 +163,8 @@ report 50105 "Inven_Reorder_List"
                 SalesStat.SetRange("Item Ledger Entry Type", SalesStat."Item Ledger Entry Type"::Sale);  //1=salg
                 if SalesStat.FindSet() then
                     repeat
-                        ThisYear := ThisYear + SalesStat."Invoiced Quantity";
+                        //180122 ThisYear := ThisYear + SalesStat."Invoiced Quantity";
+                        ThisYear := ThisYear - SalesStat."Invoiced Quantity";
                     until SalesStat.Next() = 0;
 
                 From_ := CalcDate('-1Å', FromDate);
@@ -175,7 +176,8 @@ report 50105 "Inven_Reorder_List"
                 SalesStat.SetRange("Item Ledger Entry Type", SalesStat."Item Ledger Entry Type"::Sale);  //1=salg
                 if SalesStat.FindSet() then
                     repeat
-                        LastYear := LastYear + SalesStat."Invoiced Quantity";
+                        //180222 LastYear := LastYear + SalesStat."Invoiced Quantity";
+                        LastYear := LastYear - SalesStat."Invoiced Quantity";
                     until SalesStat.Next() = 0;
 
                 if ThisMonth = 0D then
@@ -192,7 +194,8 @@ report 50105 "Inven_Reorder_List"
                 SalesStat.SetRange("Item Ledger Entry Type", SalesStat."Item Ledger Entry Type"::Sale);  //1=salg
                 if SalesStat.FindSet() then
                     repeat
-                        SalesThisMonth := SalesThisMonth + SalesStat."Invoiced Quantity";
+                        //180122 SalesThisMonth := SalesThisMonth + SalesStat."Invoiced Quantity";
+                        SalesThisMonth := SalesThisMonth - SalesStat."Invoiced Quantity";
                     until SalesStat.Next() = 0;
 
                 gns := 0;
