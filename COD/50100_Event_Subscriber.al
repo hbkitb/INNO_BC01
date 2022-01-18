@@ -349,9 +349,15 @@ codeunit 50100 "Inno EventSubscriber ERPG"
         LagStat: Record "Lagstat ERPG";
         sa: Record "Sales & Receivables Setup";  //120121
         cust: Record Customer;
+        PriceWarning: Decimal;  //180122
+        CustName: Text[30];  //180122
+        SalesEmp: Record "Salesperson/Purchaser"; //180122
+        SalesName: Text[30]; //180122
 
     begin
         DangerWarning := false;
+        PriceWarning := 0;  //180122
+        CustName := '';  //180122
         SalLin.Reset();
         SalLin.SetRange("Document No.", SalesHeader."No.");
         //Message(SalesHeader."No.");
@@ -383,12 +389,44 @@ codeunit 50100 "Inno EventSubscriber ERPG"
                         else
                             Message('Ordrenr: ' + SalLin."Document No." + ' Varenummer: ' + SalLin."No." + '\' +
                                     'Der findes ingen lageroplysninger på dette varenummer');
-                    end;  //item type          
+                    end;  //item type  
+                    //HBK / ITB - 180122 - Check for forskel på hele ordrern som i exit på ordlin i C5
+                    if SalLin."Qty. to Invoice" <> 0 then begin
+                        if (ItemTable.MinPris <> 0) then begin
+
+                            if ((SalLin.Amount / SalLin.Quantity) < ItemTable.MinPris) then begin
+                                PriceWarning := PriceWarning + ((ItemTable.MinPris - (SalLin.Amount / SalLin.Quantity)) * SalLin."Qty. to Invoice");
+
+                                //Message('Pris er nu under den anbefalede minimumpris' + '\' +
+                                //        'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
+                                //        'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                            end;
+
+                        end;
+                    end;
+                    //HBK / ITB - check forskel - 180122        
                 end;  //item.get
 
             until SalLin.Next() = 0;
             if DangerWarning = true then
                 Message('Denne faktura indeholder FARLIGT gods !!!!');
+
+            //HBK / ITB - 180122 - PriceWarning   
+            if PriceWarning <> 0 then begin
+                if cust.get(SalesHeader."Bill-to Customer No.") then
+                    CustName := cust.Name;
+                if SalesEmp.Get(SalesHeader."Salesperson Code") then
+                    SalesName := SalesEmp.Name;
+
+
+                Message('Denne ordres samlede pris er under minimum med:' + '\' +
+                        'Kr: ' + Format(PriceWarning) + '\' + '\' +
+                        'Kunde: ' + CustName + '\' +
+                        'Sælger: ' + SalesName);
+
+                PriceWarning := 0;
+            end;
+            //HBK / ITB - 180122 - PriceWarning   
 
         end;
         //171120 
