@@ -38,19 +38,22 @@ tableextension 50110 "Sales Line ERPG" extends "Sales Line"
 
     var
         itemTable: Record Item;
+        se: Record "Sales & Receivables Setup";
 
     begin
-        if (ItemTable.get(Rec."No.")) and (rec.Quantity <> 0) then begin
+        se.Get();
+        if (se.Country <> 'DK') or ((Rec."Sell-to Customer No." <> se.SVComp) and (Rec."Sell-to Customer No." <> se.NoComp)) then begin
+            if (ItemTable.get(Rec."No.")) and (rec.Quantity <> 0) then begin
 
-            if (ItemTable.MinPris <> 0) then begin
-                if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) then begin
-                    Message('Pris er nu under den anbefalede minimumpris' + '\' +
-                            'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
-                            'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                if (ItemTable.MinPris <> 0) then begin
+                    if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) then begin
+                        Message('Pris er nu under den anbefalede minimumpris' + '\' +
+                                'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
+                                'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                    end;
                 end;
             end;
         end;
-
 
     end;
 
@@ -58,19 +61,22 @@ tableextension 50110 "Sales Line ERPG" extends "Sales Line"
 
     var
         itemTable: Record Item;
+        se: Record "Sales & Receivables Setup";
 
     begin
-        if (ItemTable.get(Rec."No.")) and (rec.Quantity <> 0) then begin
+        se.Get();
+        if (se.Country <> 'DK') or ((Rec."Sell-to Customer No." <> se.SVComp) and (Rec."Sell-to Customer No." <> se.NoComp)) then begin
+            if (ItemTable.get(Rec."No.")) and (rec.Quantity <> 0) then begin
 
-            if (ItemTable.MinPris <> 0) then begin
-                if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) then begin
-                    Message('Pris er nu under den anbefalede minimumpris' + '\' +
-                            'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
-                            'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                if (ItemTable.MinPris <> 0) then begin
+                    if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) then begin
+                        Message('Pris er nu under den anbefalede minimumpris' + '\' +
+                                'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
+                                'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                    end;
                 end;
             end;
         end;
-
 
     end;
     //HBK / ITB - 170122
