@@ -85,6 +85,7 @@ table 50114 "LA_Exc_File_Pakke"
         Pakke: Text[30];
         Pos: Integer;
         SalesPakke: Record "Sales Header";
+        SalesInvPakke: Record "Sales Invoice Header";  //HBK / ITB - 180122
 
     begin
         ID := CreateGuid();   //SystemId;  //CreateGuid();
@@ -120,8 +121,18 @@ table 50114 "LA_Exc_File_Pakke"
             SalesPakke.Modify;
         end;
 
-
-
+        //HBK / ITB - 180122 også på evt. opdateret faktura
+        SalesInvPakke.Reset;
+        SalesInvPakke.SetRange("Order No.", Sales);
+        SalesInvPakke.SetRange("Sell-to Customer No.", Cust);
+        IF SalesInvPakke.FindSet then begin
+            if SalesInvPakke."Package Tracking No." = '' then begin
+                SalesInvPakke."Package Tracking No." := Pakke;
+                SalesInvPakke.PakkeNo := Pakke;
+                SalesInvPakke.Modify;
+            end;
+        end;
+        //HBK / ITB - 180122
 
 
     end;
