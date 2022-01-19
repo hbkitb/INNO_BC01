@@ -19,7 +19,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.95326cm</Width>
+                  <Width>2.20726cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.3938cm</Width>
@@ -1578,7 +1578,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Top>10pt</Top>
             <Height>1.40432cm</Height>
-            <Width>23.26169cm</Width>
+            <Width>23.51569cm</Width>
             <Style />
           </Tablix>
           <Textbox Name="ItemTABLECAPTIONItemFilter">
