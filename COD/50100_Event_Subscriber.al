@@ -350,9 +350,9 @@ codeunit 50100 "Inno EventSubscriber ERPG"
         sa: Record "Sales & Receivables Setup";  //120121
         cust: Record Customer;
         PriceWarning: Decimal;  //180122
-        CustName: Text[30];  //180122
+        CustName: Text[100];  //180122
         SalesEmp: Record "Salesperson/Purchaser"; //180122
-        SalesName: Text[30]; //180122
+        SalesName: Text[100]; //180122
 
     begin
         DangerWarning := false;
@@ -426,7 +426,7 @@ codeunit 50100 "Inno EventSubscriber ERPG"
 
                 PriceWarning := 0;
             end;
-            //HBK / ITB - 180122 - PriceWarning   
+            //HBK / ITB - 180122 - PriceWarning 
 
         end;
         //171120 
