@@ -185,6 +185,8 @@ xmlport 50159 "50159_CostPriceUpdate"
                 //Item.P2 := Felt04;
 
                 Evaluate(item.CostPriceVAL, Felt03);
+                //Evaluate(item.StrPrKs, Felt03); måske 210122
+
 
                 //Item.Short := Felt06;
 

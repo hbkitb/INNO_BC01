@@ -4308,6 +4308,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort 50158_Imp_Deb_InvAcc - Property Caption</note>
         </trans-unit>
+        <trans-unit id="XmlPort 1760187204 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LagImport</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort 50159_CostPriceUpdate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="XmlPort 3217405924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Consingnor Export</source>
           <note from="Developer" annotates="general" priority="2"></note>
