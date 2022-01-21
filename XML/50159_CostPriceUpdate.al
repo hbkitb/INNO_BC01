@@ -1,4 +1,4 @@
-xmlport 50159 "50155_CostPriceUpdate"
+xmlport 50159 "50159_CostPriceUpdate"
 {
     //Import af ekstra felter fra C5 Lagerkart
 
