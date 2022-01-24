@@ -458,6 +458,9 @@ report 50107 "SalesInv_Btekst_Mail"
             column(ITBLink_UrlText; ITBLink_UrlText)
             {
             }
+            column(UserNameITB; UserName)
+            {
+            }
             dataitem(Line; "Sales Invoice Line")
             {
                 DataItemLink = "Document No." = FIELD("No.");
@@ -1114,6 +1117,7 @@ report 50107 "SalesInv_Btekst_Mail"
                 O365SalesInvoiceMgmt: Codeunit "O365 Sales Invoice Mgmt";
                 saleslink: Record "Sales Header";
                 Pakke: Text[30];
+                UserITB: Record User;
             begin
                 //hbk if EnvInfoProxy.IsInvoicing then begin
                 "Language Code" := Language.GetUserLanguageCode;
@@ -1130,7 +1134,15 @@ report 50107 "SalesInv_Btekst_Mail"
                         Pakke := saleslink."Package Tracking No.";
                 end;
                 Pakke := "Package Tracking No.";  //221221 - HBK / ITB - Fra opd. faktura
-                                                  //
+                //HBK / ITB - 240122
+                UserName := '';
+                UserITB.Reset;
+                UserITB.SetRange("User Name", UserId);
+                if UserITB.FindSet then
+                    UserName := UserITB."Full Name"
+                else
+                    UserName := 'ANNI';
+                //HBK / ITB - 240122                                   //
 
 
                 //hbk if not EnvInfoProxy.IsInvoicing then
@@ -1451,6 +1463,7 @@ report 50107 "SalesInv_Btekst_Mail"
         PakkeURL: Text; //HBK / ITB - 160421
         ITBLink_Url: Text[100];
         ITBLink_UrlText: Text[100]; //270421
+        UserName: Code[50];  //240122 
 
     local procedure InitLogInteraction()
     begin

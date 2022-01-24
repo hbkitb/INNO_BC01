@@ -194,7 +194,7 @@ codeunit 50105 "Order Handler ERPG"
                 //lines.SetRange(OrdreNummer, linesSort.OrdreNummer);  //110122
                 lines.SetRange(tradeCode, 'Samle');  //110122
                 lines.SetRange(Varenummer, linesSort.Varenummer);
-                if lines.FindSet then begin
+                if (lines.FindSet) and (linesSort.Antal >= 0) then begin //240122 and antal >= 0
                     lines.Antal := lines.Antal + linesSort.Antal;
                     lines.Modify();
                 end
@@ -203,7 +203,10 @@ codeunit 50105 "Order Handler ERPG"
                     lines.Init();
                     lines := linesSort;
                     //lines.OrdreNummer := 'Samle';
-                    lines.TradeCode := 'Samle';
+                    if linesSort.Antal >= 0 then   //240122 Kredit for sig pr. linie
+                        lines.TradeCode := 'Samle'
+                    else
+                        lines.TradeCode := linesSort.OrdreNummer;  //240122 kredit lig samleK   
                     lines.Insert;
                 end;
 
@@ -218,7 +221,7 @@ codeunit 50105 "Order Handler ERPG"
         lines.SetRange(Land, Country);
         lines.SetRange(IsCreated, false);
         //110122 lines.SetRange(OrdreNummer, 'Samle');
-        lines.SetRange(Tradecode, 'Samle'); //110122
+        //lines.SetRange(Tradecode, 'Samle'); //110122  - ud igen 240122
 
         New := true;
         LineNo := 1000;
