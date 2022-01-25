@@ -46,10 +46,12 @@ tableextension 50110 "Sales Line ERPG" extends "Sales Line"
             if (ItemTable.get(Rec."No.")) and (rec.Quantity <> 0) then begin
 
                 if (ItemTable.MinPris <> 0) then begin
-                    if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) then begin
-                        Message('Pris er nu under den anbefalede minimumpris' + '\' +
-                                'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
-                                'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                    if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) and (ItemTable.MinPris - (Rec.Amount / Rec.Quantity) >= 1) then begin
+                        if (rec."Gen. Bus. Posting Group" = '1') or (Rec."Gen. Bus. Posting Group" = '2') then
+                            Message('Pris er nu under den anbefalede minimumpris' + '\' +
+                                    'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
+                                    'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity) + '\' + '\' +
+                                    'Kunde: ' + Rec."Sell-to Customer No." + ' Vare: ' + Rec."No.");
                     end;
                 end;
             end;
@@ -68,11 +70,13 @@ tableextension 50110 "Sales Line ERPG" extends "Sales Line"
         if (se.Country <> 'DK') or ((Rec."Sell-to Customer No." <> se.SVComp) and (Rec."Sell-to Customer No." <> se.NoComp)) then begin
             if (ItemTable.get(Rec."No.")) and (rec.Quantity <> 0) then begin
 
-                if (ItemTable.MinPris <> 0) then begin
-                    if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) then begin
-                        Message('Pris er nu under den anbefalede minimumpris' + '\' +
-                                'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
-                                'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity));
+                if (ItemTable.MinPris <> 0) then begin                                   //240122
+                    if ((Rec.Amount / Rec.Quantity) < ItemTable.MinPris) and (ItemTable.MinPris - (Rec.Amount / Rec.Quantity) >= 1) then begin
+                        if (rec."Gen. Bus. Posting Group" = '1') or (Rec."Gen. Bus. Posting Group" = '2') then
+                            Message('Pris er nu under den anbefalede minimumpris' + '\' +
+                                    'under med: ' + Format(ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) + '\' +
+                                    'I alt: ' + Format((ItemTable.MinPris - (Rec.Amount / Rec.Quantity)) * Rec.Quantity) + '\' + '\' +
+                                    'Kunde: ' + Rec."Sell-to Customer No." + ' Vare: ' + Rec."No.");
                     end;
                 end;
             end;
