@@ -420,7 +420,7 @@ page 50122 "eCustomer Card"
 
                             //if (Country1 <> 'DANMARK') and (Country1 <> 'NORGE') and (Country1 <> 'SVERIGE') and (Country1 <> '') then
                             //    cust."Country/Region Code" := Country1;
-                            cust."Payment Terms Code" := Payment;
+                            //250122 cust."Payment Terms Code" := Payment;
                             cust."VAT Registration No." := CVRNo;
                             cust."Phone No." := phone;
                             cust."E-Mail" := eMail1;
@@ -468,7 +468,7 @@ page 50122 "eCustomer Card"
                             //    cust."Country/Region Code" := Country1;
 
 
-                            cust."Payment Terms Code" := Payment;
+                            //250122 cust."Payment Terms Code" := Payment;
                             cust."VAT Registration No." := CVRNo;
                             cust."Phone No." := phone;
                             cust."E-Mail" := eMail1;
