@@ -23,11 +23,11 @@ pageextension 50102 "Inno Sales Order List ERPG" extends "Sales Order List"
                     //   x: XmlPort "Consignor export ERPG";
                     //xml: XmlDocument;
                     x: Codeunit "FS Export";
-                begin
-                    if Format(Rec.Consignor) <> '' then begin
-                        ans := Dialog.Confirm('Denne ordre er eksponeret til consignor vil du forsætte?', true);
-                        if not ans then
-                            exit;
+                begin                                      //250122 - HBK
+                    if (Format(Rec.Consignor) <> '') and (Format(Rec.Consignor) <> '0') then begin
+                        //ans := Dialog.Confirm('Denne ordre er eksponeret til consignor vil du forsætte?', true);
+                        //if not ans then
+                        //    exit;
                     end;
 
                     x."Consignor File Create"(Rec);

@@ -1044,9 +1044,14 @@ codeunit 50101 "FS Export"
                 ExFile.Insert;
                 //message('efter');
   140421 */
+
+
+        // 250122
+        if head.WINEDIDato >= (Today - 365) then
+            head.Consignor := Today;
         head.WINEDIDato := Today;
         head.Modify;
-
+        //250122 */
 
     end;
     //HBK / ITB - 121020   // 
