@@ -182,7 +182,7 @@ page 50115 "LA_Dialog"
             //140421  Message(ExFile.Id);
 
 
-            //ind igen 250122        ExFile.Insert;  //******************
+            ExFile.Insert;  //******************
             //250122 message('efter');
 
             WINEDIDato := Today;
