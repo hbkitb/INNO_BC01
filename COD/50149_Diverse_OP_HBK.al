@@ -68,7 +68,7 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                     item.Reset;
                     item.SetRange(Type, item.Type::Inventory);
                     item.SetRange(NoInnoItem, false);
-                    item.SetRange("No.", '01,0108', '01,0137');  //Ud igen - 26
+                    //item.SetRange("No.", '01,0108', '01,0137');  //Ud igen - 26
                     if item.FindSet then begin
                         repeat
                             SalesPrice.Reset;
