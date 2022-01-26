@@ -2,10 +2,14 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
 {
 
     trigger OnRun()
+
+    var
+        item: Record Item;
+        SalesPrice: Record "Sales Price";
     begin
         MESSAGE('igang');
         //Mydialog.Open('Agiv kørsel', Svar01);
-        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto,Kospris opd');
+        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto,Kospris opd,SALGspris opd');
 
         case Svar01 of
             1:
@@ -57,6 +61,33 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                 begin
                     Message('Kostprisopdat');
                     Xmlport.Run(Xmlport::"50159_CostPriceUpdate");
+                end;
+            10:
+                begin
+                    Message('SALGsprisopdat');
+                    item.Reset;
+                    item.SetRange(Type, item.Type::Inventory);
+                    item.SetRange(NoInnoItem, false);
+                    item.SetRange("No.", '01,0108', '01,0137');  //Ud igen - 26
+                    if item.FindSet then begin
+                        repeat
+                            SalesPrice.Reset;
+                            SalesPrice.SetRange("Item No.", item."No.");
+                            if SalesPrice.FindSet then begin
+                                repeat
+                                    SalesPrice."Unit Price" := SalesPrice."Unit Price" * 1.1;
+                                    SalesPrice."Unit Price" := Round(SalesPrice."Unit Price", 1, '=');
+                                    SalesPrice.Modify;
+                                until SalesPrice.Next = 0;
+                            end;
+                            item."Unit Price" := item."Unit Price" * 1.1;
+                            item."Unit Price" := Round(item."Unit Price", 1, '=');
+                            item.Modify;
+
+                        until item.Next = 0;
+
+                    end;
+                    //Xmlport.Run(Xmlport::"50159_CostPriceUpdate");
                 end;
 
         end;
