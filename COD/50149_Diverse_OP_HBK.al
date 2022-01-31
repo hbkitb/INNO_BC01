@@ -75,9 +75,24 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                             SalesPrice.SetRange("Item No.", item."No.");
                             if SalesPrice.FindSet then begin
                                 repeat
-                                    SalesPrice."Unit Price" := SalesPrice."Unit Price" * 1.1;
-                                    SalesPrice."Unit Price" := Round(SalesPrice."Unit Price", 1, '=');
-                                    SalesPrice.Modify;
+                                    if SalesPrice."Sales Code" <> 'NETTO' then begin
+                                        SalesPrice."Unit Price" := SalesPrice."Unit Price" * 1.1;
+                                        SalesPrice."Unit Price" := Round(SalesPrice."Unit Price", 1, '=');
+                                        SalesPrice.Modify;
+                                    end;
+                                    if SalesPrice."Sales Code" = 'NETTO' then begin
+                                        if item.CostCurrency = 'EUR' then begin
+                                            SalesPrice."Unit Price" := item.CostPriceVAL * 7.4365;
+                                            SalesPrice."Unit Price" := Round(SalesPrice."Unit Price", 0.01, '=');
+                                            SalesPrice.Modify;
+
+                                        end
+                                        else begin
+                                            SalesPrice."Unit Price" := item.CostPriceVAL;
+                                            SalesPrice."Unit Price" := Round(SalesPrice."Unit Price", 0.01, '=');
+                                            SalesPrice.Modify;
+                                        end;
+                                    end;
                                 until SalesPrice.Next = 0;
                             end;
                             item."Unit Price" := item."Unit Price" * 1.1;
