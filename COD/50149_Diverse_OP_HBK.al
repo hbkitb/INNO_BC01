@@ -93,6 +93,9 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                                             SalesPrice.Modify;
                                         end;
                                     end;
+                                    if SalesPrice."Sales Code" = 'VSS' then
+                                        SalesPrice.Delete;
+
                                 until SalesPrice.Next = 0;
                             end;
                             item."Unit Price" := item."Unit Price" * 1.1;
