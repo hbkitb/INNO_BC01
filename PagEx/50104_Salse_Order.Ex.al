@@ -64,6 +64,35 @@ pageextension 50104 "Sales Order inno ERPG" extends "Sales Order"
 
     actions
     {
+        addlast(processing)
+        {
+            action(ConsignorLabel)
+            {
+                Caption = 'Consignor eksport';
+                ApplicationArea = All;
+                Promoted = true;
+                Image = Export;
+                trigger OnAction()
+                var
+
+                    ans: Boolean;
+                    //ous: OutStream;//
+                    //   x: XmlPort "Consignor export ERPG";
+                    //xml: XmlDocument;
+                    x: Codeunit "FS Export";
+                begin                                      //250122 - HBK
+                    if (Format(Rec.Consignor) <> '') and (Format(Rec.Consignor) <> '0') then begin
+                        //ans := Dialog.Confirm('Denne ordre er eksponeret til consignor vil du forsætte?', true);
+                        //if not ans then
+                        //    exit;
+                    end;
+
+                    x."Consignor File Create"(Rec);
+
+                end;
+            }
+
+        }
 
 
     }
