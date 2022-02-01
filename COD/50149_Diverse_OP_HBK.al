@@ -9,7 +9,7 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
     begin
         MESSAGE('igang');
         //Mydialog.Open('Agiv kørsel', Svar01);
-        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto,Kospris opd,SALGspris opd');
+        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto,Kospris opd,SALGspris opd,MinPris opd');
 
         case Svar01 of
             1:
@@ -100,6 +100,26 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                             end;
                             item."Unit Price" := item."Unit Price" * 1.1;
                             item."Unit Price" := Round(item."Unit Price", 1, '=');
+                            item.Modify;
+
+                        until item.Next = 0;
+
+                    end;
+                    //Xmlport.Run(Xmlport::"50159_CostPriceUpdate");
+                end;
+
+            11:
+                begin
+                    Message('MinPris opdater');
+                    item.Reset;
+                    item.SetRange(Type, item.Type::Inventory);
+                    item.SetRange(NoInnoItem, false);
+                    //item.SetRange("No.", '01,0108', '01,0137');  //Ud igen - 26
+                    if item.FindSet then begin
+                        repeat
+
+                            item.MinPris := item.MinPris * 1.1;
+                            item.MinPris := Round(item.MinPris, 1, '=');
                             item.Modify;
 
                         until item.Next = 0;
