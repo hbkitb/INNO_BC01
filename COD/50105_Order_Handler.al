@@ -196,6 +196,7 @@ codeunit 50105 "Order Handler ERPG"
                 lines.SetRange(Varenummer, linesSort.Varenummer);
                 if (lines.FindSet) and (linesSort.Antal >= 0) then begin //240122 and antal >= 0
                     lines.Antal := lines.Antal + linesSort.Antal;
+                    lines."Beløb (samlet for linien)" := lines."Beløb (samlet for linien)" + linesSort."Beløb (samlet for linien)"; //160222 
                     lines.Modify();
                 end
                 else begin
