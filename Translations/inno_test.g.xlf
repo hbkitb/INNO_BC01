@@ -4513,6 +4513,36 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Control ItemName1 - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Control 3331428421 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>MineralOlie</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Control Afgift - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Control 3331428421 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>MineralOlie</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Control Afgift - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Control 695437203 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>SmøreOlie</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Control Afgift2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Control 695437203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>SmøreOlie</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Control Afgift2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Control 1333133820 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Co2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Control Afgift3 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Control 1333133820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Co2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Control Afgift3 - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1813069792 - Control 1179575088 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Valuta for kostpris</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -4777,6 +4807,21 @@
           <source>ToldPosTekst</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension InvenPostingGroup Inno ERPG - Field ToldPosTxt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1780196036 - Field 3331428421 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>MineralOlie</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ItemEx ERPG - Field Afgift - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1780196036 - Field 695437203 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>SmøreOlie</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ItemEx ERPG - Field Afgift2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1780196036 - Field 1333133820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Co2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ItemEx ERPG - Field Afgift3 - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1780196036 - Field 1179575088 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
           <source>KostValuta</source>

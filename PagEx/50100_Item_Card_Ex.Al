@@ -113,6 +113,7 @@ pageextension 50100 "Item_Card_Ex ERPG" extends "Item Card"
                     ApplicationArea = All;
                     Caption = 'MineralOlie';
                     ToolTip = 'MineralOlie';
+                    DecimalPlaces = 3;
 
                 }
                 field(Afgift2; Afgift2)
@@ -120,6 +121,7 @@ pageextension 50100 "Item_Card_Ex ERPG" extends "Item Card"
                     ApplicationArea = All;
                     Caption = 'SmøreOlie';
                     ToolTip = 'SmøreOlie';
+                    DecimalPlaces = 3;
 
                 }
                 field(Afgift3; Afgift3)
@@ -127,6 +129,7 @@ pageextension 50100 "Item_Card_Ex ERPG" extends "Item Card"
                     ApplicationArea = All;
                     Caption = 'Co2';
                     ToolTip = 'Co2';
+                    DecimalPlaces = 3;
 
                 }
 
