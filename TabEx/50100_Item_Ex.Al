@@ -110,6 +110,27 @@ tableextension 50100 "ItemEx ERPG" extends Item
             Caption = 'ProductVariantId';
 
         }
+        field(50116; Afgift; Decimal)
+        {
+            DataClassification = ToBeClassified;
+
+            Caption = 'MineralOlie';
+
+        }
+        field(50117; Afgift2; Decimal)
+        {
+            DataClassification = ToBeClassified;
+
+            Caption = 'SmøreOlie';
+
+        }
+        field(50118; Afgift3; Decimal)
+        {
+            DataClassification = ToBeClassified;
+
+            Caption = 'Co2';
+
+        }
     }
     var
 

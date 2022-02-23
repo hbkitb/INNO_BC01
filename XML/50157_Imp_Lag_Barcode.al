@@ -84,10 +84,25 @@ xmlport 50157 "50157_Imp_Lag_Barcode"
                 {
                     MinOccurs = Zero;
                 }
-               textelement(Felt17)
+                textelement(Felt17)
                 {
                     MinOccurs = Zero;
                 }
+                textelement(Felt18)
+                {
+                    MinOccurs = Zero;
+                }
+                textelement(Felt19)
+                {
+                    MinOccurs = Zero;
+                }
+                textelement(Felt20)
+                {
+                    MinOccurs = Zero;
+                }
+
+
+
 
 
                 trigger OnBeforeInsertRecord()
@@ -196,46 +211,49 @@ xmlport 50157 "50157_Imp_Lag_Barcode"
 
         IF Item.FINDSET then
             repeat
-               if Felt02 <> '' then
-                  Item.GTIN := Felt02;
-/*
-                Evaluate(item.MinPris, Felt02);
+                //if Felt02 <> '' then
+                Evaluate(item.Afgift, Felt18);
+                Evaluate(item.Afgift2, Felt19);
+                Evaluate(item.Afgift3, Felt20);
+                // Item.GTIN := Felt02;
+                /*
+                                Evaluate(item.MinPris, Felt02);
 
-                Item.P1 := Felt03;
-                Item.P2 := Felt04;
+                                Item.P1 := Felt03;
+                                Item.P2 := Felt04;
 
-                Evaluate(item.StrPrKs, Felt05);
+                                Evaluate(item.StrPrKs, Felt05);
 
-                Item.Short := Felt06;
+                                Item.Short := Felt06;
 
-                if Felt07 = '0' then
-                    Item.PaySaldo := false
-                else
-                    Item.PaySaldo := true;
+                                if Felt07 = '0' then
+                                    Item.PaySaldo := false
+                                else
+                                    Item.PaySaldo := true;
 
-                if Felt08 = '0' then
-                    Item.NoInnoItem := false
-                else
-                    Item.NoInnoItem := true;
+                                if Felt08 = '0' then
+                                    Item.NoInnoItem := false
+                                else
+                                    Item.NoInnoItem := true;
 
-                Item.UnNumber := Felt09;
+                                Item.UnNumber := Felt09;
 
-                if Felt10 = '0' then
-                    Item.Farlig := false
-                else
-                    Item.Farlig := true;
+                                if Felt10 = '0' then
+                                    Item.Farlig := false
+                                else
+                                    Item.Farlig := true;
 
-                Evaluate(item.StkPrLag, Felt11);
-                Evaluate(item.StkPrPal, Felt12);
+                                Evaluate(item.StkPrLag, Felt11);
+                                Evaluate(item.StkPrPal, Felt12);
 
-                Item.PlacCopy := Felt13;
+                                Item.PlacCopy := Felt13;
 
-                item.CostCurrency := Felt14;
+                                item.CostCurrency := Felt14;
 
-                Evaluate(item.CostPriceVAL, Felt15);
+                                Evaluate(item.CostPriceVAL, Felt15);
 
-                Item.ProductVariantId := Felt16;
-*/
+                                Item.ProductVariantId := Felt16;
+                */
 
                 Item.MODIFY;
             until Item.NEXT = 0;

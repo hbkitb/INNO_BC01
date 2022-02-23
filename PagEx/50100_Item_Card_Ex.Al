@@ -108,6 +108,27 @@ pageextension 50100 "Item_Card_Ex ERPG" extends "Item Card"
                     ToolTip = 'Valuta for kostpris';
 
                 }
+                field(Afgift; Afgift)
+                {
+                    ApplicationArea = All;
+                    Caption = 'MineralOlie';
+                    ToolTip = 'MineralOlie';
+
+                }
+                field(Afgift2; Afgift2)
+                {
+                    ApplicationArea = All;
+                    Caption = 'SmøreOlie';
+                    ToolTip = 'SmøreOlie';
+
+                }
+                field(Afgift3; Afgift3)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Co2';
+                    ToolTip = 'Co2';
+
+                }
 
             }
         }
