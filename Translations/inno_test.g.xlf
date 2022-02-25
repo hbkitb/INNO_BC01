@@ -4493,6 +4493,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inno Sales Order List ERPG - Action Test_Pakke_Link - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2562282349 - Action 3687098037 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4199630280">
+          <source>Slå op på rykker konfigurationspakke til Export til Excel</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ITB Reminder List - Action RykkerListe - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2562282349 - Action 3687098037 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4199630280">
+          <source>Excel Liste</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ITB Reminder List - Action RykkerListe - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1813069792 - Action 3121263624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>ERP-IMP</source>
           <note from="Developer" annotates="general" priority="2"></note>

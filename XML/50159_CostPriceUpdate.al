@@ -158,6 +158,8 @@ xmlport 50159 "50159_CostPriceUpdate"
         LineNo: Decimal;
         LineNoOld: Decimal;
         CostPriceRec: Record "Purchase Price";
+        FaktorPris: Decimal;
+        Faktor: Decimal;
 
     /*
     EVALUATE(Dag,COPYSTR(Felt02,1,2));//
@@ -184,7 +186,14 @@ xmlport 50159 "50159_CostPriceUpdate"
                 //Item.P1 := Felt03;
                 //Item.P2 := Felt04;
 
-                Evaluate(item.CostPriceVAL, Felt03);
+                FaktorPris := 0;
+                Faktor := 0;
+
+                Evaluate(FaktorPris, Felt02);
+                Evaluate(Faktor, Felt03);
+                FaktorPris := FaktorPris * Faktor;
+
+                Item.CostPriceVAL := FaktorPris;
                 //Evaluate(item.StrPrKs, Felt03); måske 210122
 
 
@@ -217,7 +226,10 @@ xmlport 50159 "50159_CostPriceUpdate"
                     //CostPriceRec."Item No." := Felt01;
                     //CostPriceRec."Vendor No." := Felt02;
                     //CostPriceRec."Currency Code" := Felt03;
-                    Evaluate(CostPriceRec."Direct Unit Cost", Felt03);
+                    //250222 Evaluate(CostPriceRec."Direct Unit Cost", Felt03);
+
+                    CostPriceRec."Direct Unit Cost" := FaktorPris;
+
                     //CostPriceRec."Unit of Measure Code" := Felt07;
                     CostPriceRec.Modify;
                 end;

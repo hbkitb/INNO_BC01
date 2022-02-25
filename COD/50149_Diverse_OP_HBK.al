@@ -75,11 +75,15 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                             SalesPrice.SetRange("Item No.", item."No.");
                             if SalesPrice.FindSet then begin
                                 repeat
+
+                                    /* 250222
                                     if SalesPrice."Sales Code" <> 'NETTO' then begin
                                         SalesPrice."Unit Price" := SalesPrice."Unit Price" * 1.1;
                                         SalesPrice."Unit Price" := Round(SalesPrice."Unit Price", 1, '=');
                                         SalesPrice.Modify;
                                     end;
+                                    250222 */
+
                                     if SalesPrice."Sales Code" = 'NETTO' then begin
                                         if item.CostCurrency = 'EUR' then begin
                                             SalesPrice."Unit Price" := item.CostPriceVAL * 7.4365;
@@ -93,14 +97,17 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                                             SalesPrice.Modify;
                                         end;
                                     end;
-                                    if SalesPrice."Sales Code" = 'VSS' then
-                                        SalesPrice.Delete;
+
+                                /* 250222
+                                if SalesPrice."Sales Code" = 'VSS' then
+                                    SalesPrice.Delete;
+                                250222 */
 
                                 until SalesPrice.Next = 0;
                             end;
-                            item."Unit Price" := item."Unit Price" * 1.1;
-                            item."Unit Price" := Round(item."Unit Price", 1, '=');
-                            item.Modify;
+                        //250222 item."Unit Price" := item."Unit Price" * 1.1;
+                        //250222 item."Unit Price" := Round(item."Unit Price", 1, '=');
+                        //250222 item.Modify;
 
                         until item.Next = 0;
 
