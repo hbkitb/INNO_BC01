@@ -138,10 +138,10 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
                 begin
                     clear(cust);
                     cust.Reset;
-                    cust.SetRange("No.", 'D00013', 'D00990');
+                    cust.SetRange("No.", 'D00060', 'D99970');
                     if cust.FindSet then
                         repeat
-                            if CopyStr(cust."No.", 1, 3) = 'D00' then
+                            if (CopyStr(cust."No.", 1, 1) = 'D') and (cust.Name = '') then
                                 cust.Delete(false);
                         until cust.Next = 0;
 
