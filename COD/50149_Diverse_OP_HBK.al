@@ -9,7 +9,7 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
     begin
         MESSAGE('igang');
         //Mydialog.Open('Agiv kørsel', Svar01);
-        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto,Kospris opd,SALGspris opd,MinPris opd');
+        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto,Kospris opd,SALGspris opd,MinPris opd,Slet DEB');
 
         case Svar01 of
             1:
@@ -133,6 +133,20 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
 
                     end;
                     //Xmlport.Run(Xmlport::"50159_CostPriceUpdate");
+                end;
+            12:
+                begin
+                    clear(cust);
+                    cust.Reset;
+                    cust.SetRange("No.", 'D00013', 'D00990');
+                    if cust.FindSet then
+                        repeat
+                            if CopyStr(cust."No.", 1, 3) = 'D00' then
+                                cust.Delete(false);
+                        until cust.Next = 0;
+
+
+
                 end;
 
         end;
