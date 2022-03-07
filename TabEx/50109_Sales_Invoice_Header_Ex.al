@@ -41,6 +41,12 @@ tableextension 50109 "Sales Invoice Header ERPG" extends "Sales Invoice Header"
             Caption = 'Consignor kolli antal';
 
         }
+        field(50107; eSalesNumber; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Nummer';
+
+        }
     }
 
     var

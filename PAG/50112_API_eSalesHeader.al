@@ -213,6 +213,13 @@ page 50112 Api_eSalesHeader
                     Caption = 'CVR';
 
                 }
+                field(CompanyId; Rec.CompanyId)
+                {
+                    ApplicationArea = All;
+                    Caption = 'CompanyId';
+
+                }
+
 
             }
         }

@@ -268,6 +268,11 @@ table 50111 "eSalesTable_I"
             Caption = 'Ordre Note';
         }
         //herover er de nye felter - 200121
+        field(48; CompanyId; Text[128])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'CompanyId';
+        }
 
 
     }

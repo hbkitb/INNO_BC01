@@ -845,7 +845,13 @@ codeunit 50101 "FS Export"
             Error('Debitor: ' + head.CustAccount + ' - eordre: ' + head.eSalesNumber + ' eksisterer ikke !');
             //exit;
             //"Create New Customer"(head);  ind igen
+        end
+        //070322
+        else begin
+            Customer.CompanyId := head.CompanyId;
+            Customer.Modify;
         end;
+        //070322
 
 
 

@@ -8,6 +8,12 @@ tableextension 50112 "Salse CR header Inno ITB" extends "Sales Cr.Memo Header"
             Caption = 'Kreditnota eksporteret';
 
         }
+        field(50101; eSalesNumber; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            Caption = 'Nummer';
+
+        }
 
     }
 

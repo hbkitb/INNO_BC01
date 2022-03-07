@@ -218,10 +218,16 @@ page 50125 Api_CrMemoHeader
                     Caption = 'Total ex. moms';
 
                 }
-                field(PostingDate; "Posting Date")
+                field(PostingDate; Rec."Posting Date")
                 {
                     ApplicationArea = All;
                     Caption = 'Dato';
+
+                }
+                field(ESalesNumber; Rec.eSalesNumber)
+                {
+                    ApplicationArea = All;
+                    Caption = 'ESalesNumber';
 
                 }
 

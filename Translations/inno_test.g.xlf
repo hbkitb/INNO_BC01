@@ -128,6 +128,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table eSalesTable_I - Field City1 - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1385737727 - Field 2084267926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CompanyId</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table eSalesTable_I - Field CompanyId - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1385737727 - Field 1856816140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>SLETTET_Land</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2552,6 +2557,11 @@
           <source>By / Adresse3</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page eSalesHeader_I - Control City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1054259824 - Control 2084267926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CompanyId</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page eSalesHeader_I - Control CompanyId - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1054259824 - Control 1856816140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Land</source>
@@ -4978,6 +4988,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Header ERPG - Field DKEXPORT - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1404543978 - Field 217099762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Nummer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Sales Invoice Header ERPG - Field eSalesNumber - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1404543978 - Field 3502633270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
           <source>Nos_FakDif</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -5122,6 +5137,11 @@
           <source>Kreditnota eksporteret</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Salse CR header Inno ITB - Field DKEXPORT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2430198569 - Field 217099762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Nummer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Salse CR header Inno ITB - Field eSalesNumber - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1636907579 - Field 1902150048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Consignor ekporteret</source>

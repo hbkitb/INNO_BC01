@@ -203,6 +203,11 @@ page 50120 "eSalesHeader_I"
                     ApplicationArea = All;
                     Caption = 'OrdreNote';
                 }
+                field(CompanyId; Rec.CompanyId)
+                {
+                    ApplicationArea = All;
+                    Caption = 'CompanyId';
+                }
 
 
             }

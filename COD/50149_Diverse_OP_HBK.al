@@ -131,14 +131,14 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
 
                         until item.Next = 0;
 
-                    end;
+                    end
                     //Xmlport.Run(Xmlport::"50159_CostPriceUpdate");
                 end;
             12:
                 begin
                     clear(cust);
                     cust.Reset;
-                    cust.SetRange("No.", 'D00060', 'D99970');
+                    cust.SetRange("No.", 'D01000', 'D99970');
                     if cust.FindSet then
                         repeat
                             if (CopyStr(cust."No.", 1, 1) = 'D') and (cust.Name = '') then
