@@ -1353,6 +1353,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_CrMemoHeader - Control EMail - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3984889333 - Control 2255269010 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ESalesNumber</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_CrMemoHeader - Control ESalesNumber - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3984889333 - Control 103542828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DebitorNummer/Konto</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1603,6 +1608,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_eSalesHeader - Control City - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2630339743 - Control 2084267926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CompanyId</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_eSalesHeader - Control CompanyId - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2630339743 - Control 1856816140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Land</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -1807,6 +1817,11 @@
           <source>eMail</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_InvoiceHeader - Control EMail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1849164531 - Control 2255269010 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ESalesNumber</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Api_InvoiceHeader - Control ESalesNumber - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1849164531 - Control 103542828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DebitorNummer/Konto</source>
@@ -4322,6 +4337,11 @@
           <source>LagImport</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort 50159_CostPriceUpdate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 2058018071 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LagImport</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort 50160_Imp_VATEU - Property Caption</note>
         </trans-unit>
         <trans-unit id="XmlPort 3217405924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Consingnor Export</source>

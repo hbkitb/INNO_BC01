@@ -9,7 +9,7 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
     begin
         MESSAGE('igang');
         //Mydialog.Open('Agiv kørsel', Svar01);
-        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto,Kospris opd,SALGspris opd,MinPris opd,Slet DEB');
+        Svar01 := Dialog.StrMenu('Imp LagKart,Imp DebKart,Imp Medarb,Imp Varegrp,Imp KostVAL,Check Kost,EAN Barcode,Deb.Fak.Konto,Kospris opd,SALGspris opd,MinPris opd,Slet DEB,EU_Serv_Vat');
 
         case Svar01 of
             1:
@@ -147,6 +147,11 @@ codeunit 50149 "50149_Diverse_OP_ERPG"
 
 
 
+                end;
+            13:
+                begin
+                    Message('EUServ opdat');
+                    Xmlport.Run(Xmlport::"50160_Imp_VATEU");
                 end;
 
         end;
