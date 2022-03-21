@@ -224,12 +224,15 @@ page 50125 Api_CrMemoHeader
                     Caption = 'Dato';
 
                 }
+
+                /*
                 field(ESalesNumber; Rec.eSalesNumber)
                 {
                     ApplicationArea = All;
                     Caption = 'ESalesNumber';
 
                 }
+                */
 
             }
         }

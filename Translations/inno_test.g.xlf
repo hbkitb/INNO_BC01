@@ -1353,11 +1353,6 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Api_CrMemoHeader - Control EMail - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3984889333 - Control 2255269010 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>ESalesNumber</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Api_CrMemoHeader - Control ESalesNumber - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3984889333 - Control 103542828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DebitorNummer/Konto</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -5153,15 +5148,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension SalesReceiveSetup Inno ERPG - Field SVEProvPct - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 2430198569 - Field 1902150048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Consignor ekporteret</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Salse CR header Inno ITB - Field Consignor - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2430198569 - Field 3189034173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
           <source>Kreditnota eksporteret</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension Salse CR header Inno ITB - Field DKEXPORT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2430198569 - Field 217099762 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
-          <source>Nummer</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension Salse CR header Inno ITB - Field eSalesNumber - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1636907579 - Field 1902150048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
           <source>Consignor ekporteret</source>

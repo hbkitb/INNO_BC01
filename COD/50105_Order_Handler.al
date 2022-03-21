@@ -331,7 +331,10 @@ codeunit 50105 "Order Handler ERPG"
         "Sales Line".Validate("Line No.", LineNo);
         "Sales Line"."Line Discount %" := 0;   //0301222
 
-        NOS_FakDiff := NOS_FakDiff + Line."Beløb (samlet for linien)";
+        if Line.Antal < 0 then
+            NOS_FakDiff := NOS_FakDiff - Line."Beløb (samlet for linien)" //210322
+        else
+            NOS_FakDiff := NOS_FakDiff + Line."Beløb (samlet for linien)";
 
         DateT := DT2Date(CurrentDateTime);
 
@@ -401,7 +404,10 @@ codeunit 50105 "Order Handler ERPG"
         //030122 "Sales Line".Validate("Line Discount %", Line."Rabat (procent)");
         "Sales Line"."Line Discount %" := 0;   //0301222
         "Sales Line".Validate("Line No.", LineNo);
-        NOS_FakDiff := NOS_FakDiff + Line."Beløb (samlet for linien)";
+        if Line.Antal < 0 then
+            NOS_FakDiff := NOS_FakDiff - Line."Beløb (samlet for linien)"
+        else
+            NOS_FakDiff := NOS_FakDiff + Line."Beløb (samlet for linien)";
         DateT := DT2Date(CurrentDateTime);
 
         if Line.Land = 'NO' then begin
