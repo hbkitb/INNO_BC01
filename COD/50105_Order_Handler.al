@@ -331,7 +331,7 @@ codeunit 50105 "Order Handler ERPG"
         "Sales Line".Validate("Line No.", LineNo);
         "Sales Line"."Line Discount %" := 0;   //0301222
 
-        if Line.Antal < 0 then
+        if Line.Antal * Line."Beløb (samlet for linien)" < 0 then
             NOS_FakDiff := NOS_FakDiff - Line."Beløb (samlet for linien)" //210322
         else
             NOS_FakDiff := NOS_FakDiff + Line."Beløb (samlet for linien)";
@@ -402,9 +402,9 @@ codeunit 50105 "Order Handler ERPG"
         "Sales Line".Validate("Unit Price", Line."Pris (stk. pris)");
         "Sales Line".Validate(Quantity, Line.Antal);
         //030122 "Sales Line".Validate("Line Discount %", Line."Rabat (procent)");
-        "Sales Line"."Line Discount %" := 0;   //0301222
+        "Sales Line"."Line Discount %" := 0;   //0301222//
         "Sales Line".Validate("Line No.", LineNo);
-        if Line.Antal < 0 then
+        if Line.Antal * Line."Beløb (samlet for linien)" < 0 then
             NOS_FakDiff := NOS_FakDiff - Line."Beløb (samlet for linien)"
         else
             NOS_FakDiff := NOS_FakDiff + Line."Beløb (samlet for linien)";
