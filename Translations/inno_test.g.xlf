@@ -2948,6 +2948,51 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Consignor File Export ERPG - Control Weight - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 4221114689 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debitor Salg Inno</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4221114689 - NamedType 896442630" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Samlet salgsbeløb (RV)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - NamedType AmtSalesLCYCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4221114689 - NamedType 1987762555" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Side</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - NamedType CurrReport_PAGENOCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4221114689 - NamedType 4082068414" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debitor - Salgsliste - INNO</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - NamedType Customer___Sales_ListCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4221114689 - NamedType 688195100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Beløb (RV) større end </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - NamedType MinAmtLCYCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4221114689 - NamedType 1404340167" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Samlet rapporteret salgsbeløb (RV)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - NamedType Total_Reported_Amount_of_Sales__LCY_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 4221114689 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indstillinger</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4221114689 - Control 2872568480 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Rapporten medtager kun debitorer med beløb over det angivne</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - Control MinAmtLCY - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4221114689 - Control 2872568480 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Beløb større end</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Customer - Sales Inno - Control MinAmtLCY - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2910973834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Inventory Reorders</source>
           <note from="Developer" annotates="general" priority="2"></note>
