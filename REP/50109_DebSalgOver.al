@@ -6,7 +6,7 @@ report 50109 "Customer - Sales Inno"
     Caption = 'Debitor Salg Inno';
     PreviewMode = PrintLayout;
     UsageCategory = ReportsAndAnalysis;
-    //DataAccessIntent = ReadOnly;
+    //DataAccessIntent = ReadOnly;//
 
     dataset
     {
