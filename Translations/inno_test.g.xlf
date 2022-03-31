@@ -2923,6 +2923,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Order Export ERPG - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3433045072 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ITB Invoice CredLin Export</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SalesCredLine_EXP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3650516991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ITB Invoice OrdLin Export</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page SalesInvoiceLine_EXP - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 793742970 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Ekspoter consignor fil</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -4577,6 +4587,16 @@
           <source>ERP-IMP</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Action ERP-TEST - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Action 3948796283 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>ITB_CredLin_EXP</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Action ITBCredlinEXP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Action 2559431788 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>ITB_OrdLin_EXP</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Action ITBordlinEXP - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1813069792 - Action 2880697932 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Lagstat</source>

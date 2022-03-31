@@ -195,7 +195,29 @@ pageextension 50100 "Item_Card_Ex ERPG" extends "Item Card"
                     Page.Run(50106);
                 end;
             }
+            action("ITBordlinEXP")
+            {
+                Caption = 'ITB_OrdLin_EXP';
+                ApplicationArea = All;
 
+                trigger OnAction()
+                begin
+                    //Message('dette er ok');
+                    Page.Run(50128);
+                end;
+            }
+
+            action("ITBCredlinEXP")
+            {
+                Caption = 'ITB_CredLin_EXP';
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+                    //Message('dette er ok');
+                    Page.Run(50129);
+                end;
+            }
 
         }
 
