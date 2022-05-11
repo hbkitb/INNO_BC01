@@ -4603,6 +4603,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Action Lagstat - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1813069792 - Action 3845845048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Udfyld postnumre</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Item_Card_Ex ERPG - Action Postnummer - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1813069792 - Action 336639331 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Inno-Bestillingsliste</source>
           <note from="Developer" annotates="general" priority="2"></note>

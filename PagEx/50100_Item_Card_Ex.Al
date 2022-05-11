@@ -218,6 +218,44 @@ pageextension 50100 "Item_Card_Ex ERPG" extends "Item Card"
                     Page.Run(50129);
                 end;
             }
+            //110522
+            action("Postnummer")
+            {
+                Caption = 'Udfyld postnumre';
+                ApplicationArea = All;
+
+                trigger OnAction()
+                var
+                    Post: Record "Post Code";
+                    Deb: Record Customer;
+
+                begin
+                    Deb.Reset;
+                    Deb.SetRange("Country/Region Code", 'SE');
+                    if Deb.FindSet then
+                        repeat
+                            Clear(Post);
+                            Post.Reset;
+                            Post.SetRange(Code, Deb."Post Code");
+                            Post.SetRange("Country/Region Code", Deb."Country/Region Code");
+                            if Post.FindSet then begin
+                                ;
+                            end
+                            else begin
+                                Clear(Post);
+                                Post.Reset;
+                                Post.Init;
+                                Post.Code := Deb."Post Code";
+                                Post.City := Deb.City;
+                                Post."Country/Region Code" := Deb."Country/Region Code";
+                                Post.Insert;
+                            end;
+
+
+                        until Deb.Next = 0;
+
+                end;
+            }
 
         }
 
