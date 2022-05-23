@@ -231,7 +231,7 @@ pageextension 50100 "Item_Card_Ex ERPG" extends "Item Card"
 
                 begin
                     Deb.Reset;
-                    Deb.SetRange("Country/Region Code", 'SE');
+                    Deb.SetRange("Country/Region Code", 'NO');
                     if Deb.FindSet then
                         repeat
                             Clear(Post);
