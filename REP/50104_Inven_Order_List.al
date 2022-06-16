@@ -1,3 +1,4 @@
+/*
 report 50104 "Inven_Order_List"
 {
     DefaultLayout = RDLC;
@@ -457,4 +458,4 @@ report 50104 "Inven_Order_List"
         TransferFromCode := NewTransferFromCode;
     end;
 }
-
+*/
