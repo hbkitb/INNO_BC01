@@ -1074,7 +1074,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.96661cm</Height>
+                  <Height>1.07244cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1577,7 +1577,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
             <Top>10pt</Top>
-            <Height>2.75898cm</Height>
+            <Height>2.86481cm</Height>
             <Width>23.51569cm</Width>
             <Style />
           </Tablix>
@@ -1610,7 +1610,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>3.11176cm</Height>
+        <Height>3.53509cm</Height>
         <Style />
       </Body>
       <Width>23.51569cm</Width>
