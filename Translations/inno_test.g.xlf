@@ -4563,6 +4563,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inno Sales Order List ERPG - Action eOrdrer - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3332726662 - Action 540311479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3332899200">
+          <source>Tilføj fragtlinie</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Inno Sales Order List ERPG - Action Freight_Add - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3332726662 - Action 1413508051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3332899200">
           <source>Se Exchange</source>
           <note from="Developer" annotates="general" priority="2"></note>

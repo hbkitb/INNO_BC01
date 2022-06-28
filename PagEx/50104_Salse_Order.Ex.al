@@ -99,7 +99,7 @@ pageextension 50104 "Sales Order inno ERPG" extends "Sales Order"
                 ApplicationArea = All;
                 Promoted = true;
                 Image = Export;
-                ShortcutKey = 'Ctrl+F7';
+                ShortcutKey = 'Ctrl+F8';
 
                 trigger OnAction()
                 var
