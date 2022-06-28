@@ -4773,6 +4773,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order inno ERPG - Action ConsignorLabel - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2127361396 - Action 540311479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Tilføj fragtlinie</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension Sales Order inno ERPG - Action Freight_Add - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2127361396 - Control 1902150048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
           <source>Dato for Consignor dannelse</source>
           <note from="Developer" annotates="general" priority="2"></note>

@@ -92,6 +92,58 @@ pageextension 50104 "Sales Order inno ERPG" extends "Sales Order"
                 end;
             }
 
+            //280622 ->
+            action(Freight_Add)
+            {
+                Caption = 'Tilføj fragtlinie';
+                ApplicationArea = All;
+                Promoted = true;
+                Image = Export;
+                ShortcutKey = 'Ctrl+F7';
+
+                trigger OnAction()
+                var
+
+                    item: Record item;
+                    "Sales Line": Record "Sales Line";
+                    LineNo: Decimal;
+                begin
+                    "Sales Line".Reset;
+                    "Sales Line".SetRange("Document No.", Rec."No.");
+                    if "Sales Line".FindSet then
+                            repeat
+                                if "Sales Line"."Line No." > LineNo then
+                                    LineNo := "Sales Line"."Line No."
+                            until "Sales Line".Next = 0;
+                    LineNo := LineNo + 10000;
+
+                    Clear("Sales Line");
+                    "Sales Line".Reset;
+                    "Sales Line".Init;
+                    //if Line.Varenummer <> '' then
+                    "Sales Line".Validate("Document Type", Rec."Document Type");
+                    "Sales Line".Validate("Document No.", Rec."No.");
+                    "Sales Line".Type := "Sales Line".Type::Item;
+                    "Sales Line".Validate(Type);
+
+                    //"Sales Line".Description := Line.Tekst;
+                    "Sales Line".Validate("No.", 'FRAGT');
+
+                    "Sales Line".Validate("Line No.", LineNo);
+                    "Sales Line"."Line Discount %" := 0;   //0301222        
+
+                    "Sales Line".Validate(Quantity, 1);
+                    "Sales Line".Validate("Unit Price");
+                    "Sales Line".Validate("Line Amount");
+                    //030122 "Sales Line".Validate("Line Discount %", Line."Rabat (procent)");
+
+
+                    "Sales Line".Insert(true);
+
+                end;
+            }
+            //280622 <-
+
         }
 
 
