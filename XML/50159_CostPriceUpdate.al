@@ -172,28 +172,30 @@ xmlport 50159 "50159_CostPriceUpdate"
 
 
     local procedure GenPostSetupImp()
+
     begin
 
         Item.RESET;
         Item.SetRange(GTIN, Felt01);
-        //250718 GenPostSetup.SETRANGE("Gen. Bus. Posting Group",Felt01);
 
         IF Item.FINDSET then
             repeat
-
-                //NEJ  item.CostCurrency := Felt03;
-
-                //Item.P1 := Felt03;
-                //Item.P2 := Felt04;
-
+                //FaktorPris := FaktorPris;
                 FaktorPris := 0;
                 Faktor := 0;
 
                 Evaluate(FaktorPris, Felt02);
-                Evaluate(Faktor, Felt03);
-                FaktorPris := FaktorPris * Faktor;
+                if Felt03 <> '' then
+                    Evaluate(Faktor, Felt03);
 
-                Item.CostPriceVAL := FaktorPris;
+                if Faktor = 0 then
+                    Item.CostPriceVAL := FaktorPris
+                else
+                    Item.CostPriceVAL := Item.CostPriceVAL * Faktor;
+
+                //FaktorPris := FaktorPris * Faktor;
+
+                //290622  Item.CostPriceVAL := FaktorPris;
                 //Evaluate(item.StrPrKs, Felt03); måske 210122
 
 
@@ -228,7 +230,8 @@ xmlport 50159 "50159_CostPriceUpdate"
                     //CostPriceRec."Currency Code" := Felt03;
                     //250222 Evaluate(CostPriceRec."Direct Unit Cost", Felt03);
 
-                    CostPriceRec."Direct Unit Cost" := FaktorPris;
+                    //CostPriceRec."Direct Unit Cost" := FaktorPris;
+                    CostPriceRec."Direct Unit Cost" := Item.CostPriceVAL;
 
                     //CostPriceRec."Unit of Measure Code" := Felt07;
                     CostPriceRec.Modify;
@@ -236,6 +239,7 @@ xmlport 50159 "50159_CostPriceUpdate"
 
             until Item.NEXT = 0;
     end;
+
 
 
 }
