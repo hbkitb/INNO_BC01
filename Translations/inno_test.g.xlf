@@ -4433,6 +4433,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">XmlPort FS __Employees ERPG - Property Caption</note>
         </trans-unit>
+        <trans-unit id="XmlPort 1002881439 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Invoice - PEPPOL BIS 3.0</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort ITB Sales Invoice - PEPPOL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1002881439 - NamedType 1856408345" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must specify a sales invoice number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort ITB Sales Invoice - PEPPOL - NamedType SpecifyASalesInvoiceNoErr</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1002881439 - NamedType 2459486831" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must specify a service invoice number.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort ITB Sales Invoice - PEPPOL - NamedType SpecifyAServInvoiceNoErr</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1002881439 - NamedType 2949108034" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 table is not supported.</source>
+          <note from="Developer" annotates="general" priority="2">%1 is the table.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort ITB Sales Invoice - PEPPOL - NamedType UnSupportedTableTypeErr</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 1002881439 - Control 2920179609 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Invoice No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort ITB Sales Invoice - PEPPOL - Control SalesInvoiceHeader."No." - Property Caption</note>
+        </trans-unit>
         <trans-unit id="XmlPort 3054927995 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item Felter</source>
           <note from="Developer" annotates="general" priority="2"></note>
