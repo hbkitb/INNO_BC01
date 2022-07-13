@@ -251,7 +251,7 @@ xmlport 50123 "ITB Sales Invoice - PEPPOL"
 
                         trigger OnBeforePassVariable()
                         begin
-                            SupplierEndpointID := '"0192">986927859';
+                            SupplierEndpointID := '986927859';
                             if SupplierEndpointID = '' then
                                 currXMLport.Skip();
                         end;
