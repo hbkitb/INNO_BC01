@@ -86,6 +86,13 @@ page 50109 Api_Item
 
                 }
 
+                field(PlacCopy; Rec.PlacCopy)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Placering';
+
+                }
+
             }
         }
     }
